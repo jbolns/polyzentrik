@@ -5,4 +5,4 @@ public/
 .aws-functions
 .env*
 utils/
-./.github
+.github
