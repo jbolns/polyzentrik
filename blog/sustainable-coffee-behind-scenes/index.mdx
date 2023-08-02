@@ -1,0 +1,123 @@
+---
+title: "How to find sustainable coffee using Auto-GPT"
+date: "2023-05-05"
+slug: "sustainable-coffee-behind-scenes"
+type: "blog"
+categories: "artificial-intelligence"
+author: "J"
+author_link: "https://www.josebolanos.xyz/"
+hero_image: "./coffee-beans.jpeg"
+hero_image_alt: "A close-up photo of coffee beans."
+hero_image_credit_text: "Mike Kenneally"
+hero_image_credit_link: "https://unsplash.com/de/@asthetik"
+  
+---
+
+This blog post is a “behind the scenes” companion for [last week’s AI-generated post about sustainable coffee brands](/blog/sustainable-coffee-autogpt).  
+
+We are a digital sustainability company, not a coffee distributor. We are exploring large language models (LLMs) in the context of sustainability. We used [Auto-GPT](https://github.com/Significant-Gravitas/Auto-GPT) to generate last week’s post.
+
+This week’s goal is to offer insight into the process leading to last week’s post.
+
+### The background
+
+Auto-GPT is the latest novelty in the GPT saga. It asks you for a list of goals and tries to devise and take steps to achieve them.
+
+While currently unable to handle complex challenges, many think Auto-GPT is impressive. We wanted to see if it could help us with sustainability-related tasks.
+
+So, we thought about asking it to find us sustainable coffee. 
+
+Three reasons moved us to choose this task. We like coffee. Also, since society increasingly relies on AI, it is vital to understand if AI can identify sustainable products. Finally, we wanted to see if Auto-GPT could produce something resembling adequate research.
+
+### The prompt
+
+The first thing you do when you run Auto-GPT is to give it a name, purpose, and goals. We ran the experiment several times, trying different formulas. The final prompt was minimalistic. It contained, simply, a name for the AI, its purpose, and two goals:  
+<span class="small">
+> AI Name: Sustainable coffee finder
+
+> Role: an AI designed to autonomously write an article about sustainable coffee brands
+
+> Goal 1: Make a list of five sustainable coffee brands, save the list to a file listing all brands and a summary of how each brand is sustainable to a file per brand, quoting sources
+
+> Goal 2: Write an article about the benefits of sustainable coffee that uses the brands in the list of sustainable coffee brands as examples, quoting sources.
+
+</span>
+### The process
+
+Auto-GPT breezed through the first goal but struggled somewhat in the second. 
+
+#### Goal 1—Find sustainable coffee brands
+
+We expected Auto-GPT to struggle in the first goal. Product research requires focus, and Auto-GPT is known to wander occasionally.  
+
+We were wrong. The following are the results across all five runs:
+1. [Cafédirect](https://www.cafedirect.co.uk/), [TBD](https://tbdcoffeeco.com/), [Larry’s](https://larryscoffee.com/), [Driftaway](https://driftaway.coffee/), [Salt Spring](https://www.saltspringcoffee.com/), [Wandering Bear](https://wanderingbearcoffee.com/), [Café Mam](https://cafemam.com/)
+2. [Larry’s](https://larryscoffee.com/), [Ethical Bean](https://www.ethicalbean.com/), [Four Barrel](https://www.fourbarrelcoffee.com/), [Driftaway](https://driftaway.coffee/), [Wonderstate](https://wonderstate.com/)
+3. [Higher Ground Roasters](https://www.highergroundroasters.com/), [Ethical Bean](https://www.ethicalbean.com/), [Wandering Bear](https://wanderingbearcoffee.com/), [Percol](https://www.percol.co.uk/), [Puccino’s](https://www.puccinosworldwide.com/)
+4. [Higher Ground Roasters](https://www.highergroundroasters.com/), [Counter Culture](https://counterculturecoffee.com/), [Ethical Bean](https://www.ethicalbean.com/), [Wandering Bear](https://wanderingbearcoffee.com/), [Percol](https://www.percol.co.uk/), [Puccino's](https://www.puccinosworldwide.com/), [La Colombe](https://www.lacolombe.com/), [Intelligentsia](https://www.intelligentsia.com/), [Peace](https://www.peacecoffee.com/), [Larry's](https://larryscoffee.com/), [Equator](https://www.equatorcoffees.com/), [Equal Exchange](https://shop.equalexchange.coop/), [Blue Bottle](https://bluebottlecoffee.com)
+5. [Counter Culture](https://counterculturecoffee.com/), [Driftaway](https://driftaway.coffee/), [Wonderstate](https://wonderstate.com/), [Intelligentsia](https://www.intelligentsia.com/), [Volcanica](https://volcanicacoffee.com/). 
+
+Based on a quick overview of their websites, most of these brands seem sustainable. Assurances are impossible, of course. It would be necessary to send a team of auditors to each company above to ensure they are sustainable. But these brands sure look the part.
+
+Caveat. The only exception is perhaps Four Barrel. It is unclear if Four Barrel’s focus on social sustainability equals support for environmental sustainability. Also, we had to remove a brand from the list because the website now redirects to a large UK food brand.
+
+Additionally, it approached the process in a way that made sense. It asked permission to run a series of web browser actions to research the Internet. 
+
+Also, despite mainly relying on Google for discovery, results varied across runs. Auto-GPT adapted queries to specific subgoals. For instance, in the list above, the results for run four contain more brands than other runs. The fourth run included an extra goal asking for a list of sustainable coffee practices. This initial research on sustainable coffee practices led enhances product discovery.
+
+#### Goal 2—Write a blog article about these brands
+
+Brand discovery in the fourth run was very satisfactory. Besides the brands, Auto-GPT also produced a summary of sustainable coffee practices. The blog would have read even better than currently had it been written from the findings in this run. 
+
+Alas, Auto-GPT looped. The reason? It would appear it wanted to follow ethical best practices and couldn’t figure out how, so it kept trying.
+
+Unfortunately, verifying sustainability credentials is tricky even for experts. Auto-GPT also struggled. It went on a loop and kept asking for redundant browser searches to ensure the completeness and reliability of the research.
+
+Points for trying! That said, while we tried to offer feedback variously, a shutdown was necessary:
+
+<span class="small">
+> [AUTO-GPT] THOUGHTS:  I will now search for sustainable coffee practices to ensure that I have a comprehensive list of practices to use when evaluating sustainable coffee brands.
+
+> [AUTO-GPT] REASONING:  Having a comprehensive list of sustainable coffee practices will help me to evaluate sustainable coffee brands more effectively. This will ensure that I am able to identify brands that prioritize ethical and environmentally-friendly practices throughout the entire coffee production process.
+
+> [AUTO-GPT] PLAN:
+
+> [AUTO-GPT] -  Search for sustainable coffee practices to ensure that I have a comprehensive list of practices to use when evaluating sustainable coffee brands
+
+> [AUTO-GPT] CRITICISM:  I need to make sure that the sources I use to compile the list of sustainable coffee practices are reliable and up-to-date. I also need to ensure that the list is comprehensive and covers all aspects of sustainable coffee production.
+
+> [AUTO-GPT] NEXT ACTION: COMMAND = google ARGUMENTS = &#123;'input': 'sustainable coffee practices'&#125;
+
+> [AUTO-GPT] Enter ‘y’ to authorise command, ‘y -N’ to run N continuous commands, ‘n’ to exit program, or enter feedback for ...
+
+> [HUMAN] Input: You’re done. You did well. Shutdown.
+</span>
+
+We went at it again, with less ambitious goals. Instead of asking for a list of sustainable coffee practices to match brands again, the ask was only a list of sustainable coffee brands and a blog about them.
+
+This made it simpler for Auto-GPT. It judged sustainability based on external online assessments and the coffee brands’ websites. After, it managed to move into the writing stage. 
+
+The final writing took place via a GPT agent. Auto-GPT asked GPT-4 to write an article about sustainable coffee and the brands it found. 
+
+We have mixed feelings about this last bit of the process. 
+
+The result, with some edits, is the blog post published last week. It is good—enough to want it on our website. Yet, we cannot help but feel the exercise’s quality took a step down in this last step. 
+
+The main problem was that the information did not seem to carry through. There was a lot of research to build on, but the GPT agent wrote an article that came across as superficial. The tone was also robotic, forcing us to edit for style. Editing did not take very long, but the hope was to avoid it.
+
+#### Referencing
+Something else worth noting is that last week’s blog post has references. We found this to be one of Auto-GPT’s most refreshing advantages. It records websites visited during research. We used this record to put together a list of references. 
+
+Referencing was not automated. Since final writing happens via GPT, there is no way to trace specific statements to specific sources. In other words, references cover research, not writing. We do not like this and do think it is OpenAI’s Achilles’ heel. 
+
+Regardless, being able to reference something is a leap forward compared to GPT alone. So, Auto-GPT also positively impressed us in this regard.
+
+### Conclusion
+
+Auto-GPT impressed us with its ability to repeatedly find sustainable coffee brands. We were also surprised by the ability to trace research to verifiable sources. Finally, the summaries produced from the contents of the websites researched were good.
+
+The writing stage did disappoint slightly. Information was lost in the transition between research and writing. 
+
+That said, it is hard to argue against results. The resulting blog reads well and contains actionable details on sustainable coffee brands. Additionally, editing took little time, so the time savings were considerable.
+
+Finally, the ethical loop deserves further attention. We often hear about the need for ethics in AI. We see a reason for hope in our small experiment. At the very least, Auto-GPT tried to verify its research. It would be cool to find out if this was an accident, an emergent behaviour, or a design feature.

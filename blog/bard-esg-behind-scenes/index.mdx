@@ -1,0 +1,137 @@
+---
+title: "Bard is full of surprises, good and bad"
+date: "2023-06-12"
+slug: "bard-esg-behind-scenes"
+type: "blog"
+categories: "artificial-intelligence"
+author: "J"
+author_link: "https://www.josebolanos.xyz/"
+hero_image: "./forest-by-ai.jpeg"
+hero_image_alt: "A forest observed from the sky, as imagined by an AI, by DALL·E."
+hero_image_credit_text: "Stable Diffusion 2.1"
+hero_image_credit_link: "https://huggingface.co/spaces/stabilityai/stable-diffusion"
+---
+### A behind-the-scenes… 
+This blog is an insight into the process of generating [last week’s Environment, Social, and Governance (ESG) post](../what-is-esg-bard/), generated using Google’s Bard.
+
+As a reminder, we are exploring large language models (LLMs) in the context of sustainability. We used GPT-4 to generate an article about ESG some weeks ago – see [post](../what-is-esg-gpt-4/) and [companion](../prompt-anchoring-chaining/). We used Auto-GPT to generate a post about sustainable coffee brands – see [post](../sustainable-coffee-autogpt/) and [companion](../sustainable-coffee-behind-scenes/). It was Bard’s turn, so we gave it the same task as GPT-4.
+
+### Who? 
+Bard is Google’s response to OpenAI’s now-famous ChatGPT. It is a large language model (LLM) trained to understand human language and generate text that mimics how humans communicate.
+
+We were eager to try Bard for three reasons: 
+* We want to compare currently available LLMs
+* [Google noted Bard can offer some referencing](https://blog.google/technology/ai/google-bard-updates-io-2023/), which is important because although we think LLMs can do good, we worry about their current inabilities in this regard
+* Since Google is the authority in web searches, we expected Bard to do an adequate job with historical and other factual data.
+
+### Great
+Bard’s initial response was better than the one we got from GPT-4. Significantly better. 
+
+ESG is about both (1) the impact ESG risks have on the financial performance of a company and (2) the impact a company has on the planet and society. GPT-4 initially framed ESG as only about the second bit. Bard’s initial answer was more mature:
+> **What is Environment, Social, and Governance (ESG)?**
+
+> ESG stands for Environmental, Social, and Governance. ESG investing is a type of investment that considers environmental, social, and governance factors when making investment decisions. ESG investors believe that companies that are committed to sustainability and responsible business practices are more likely to be successful in the long term.
+
+> [The response went on for a few more paragraphs, but the above suffices to illustrate the point.]
+
+It was also possible to improve this answer further with the same technique we used to improve GPT-4’s initial response: [prompt anchoring and chaining](../prompt-anchoring-chaining/). 
+
+We asked Bard about the concept of double materiality. Double materiality describes ESG as related to both how companies are affected by ESG risks and their outward ESG impacts. We then asked Bard to rewrite in a way that considers double materiality.
+
+The response was less sophisticated than GPT-4’s. GPT-4 incorporated the idea of double materiality into the text. Bard included double materiality explicitly:
+> **Excellent, could you please rewrite the initial response about what is ESG to be in line with the idea of double materiality? You do not need to explicitly mention double materiality, only to ensure the response aligns to this idea.**
+
+> Sure, here is a rewritten response about what is ESG to be in line with the idea of double materiality:
+
+> ESG stands for Environmental, Social, and Governance. ESG investing is a type of investment that considers environmental, social, and governance factors when making investment decisions. ESG investors believe that companies that are committed to sustainability and responsible business practices are more likely to be successful in the long term.
+
+> …
+
+> ESG investors can use these metrics to screen companies for investment, or to weight their investments in different companies based on their ESG performance.
+
+> …
+
+> The concept of double materiality is the idea that a company’s sustainability performance can have a material impact on its financial performance, and vice versa. In other words, a company’s sustainability performance can affect its bottom line, and its financial performance can affect its sustainability performance.
+
+> ESG investing is a way to implement the concept of double materiality. By investing in companies that are committed to sustainability, ESG investors are betting that these companies will be more successful in the long term. This is because sustainability is not just a cost, but also an opportunity. Companies that are committed to sustainability can reduce their risk, improve their financial performance, and make a positive contribution to the environment and society.
+
+> [The response went on for a few more paragraphs, but the above suffices to illustrate the point.]
+
+Despite being less sophisticated than GPT-4's, the result considered the concept. Furthermore, we asked Bard to consolidate its responses to our initial sequence of prompts into a blog post. The consolidated response made a fine general-knowledge introduction to ESG (what the blog piece ended up being) and what could have been a promising foundation for a more in-depth article.
+
+Note, however, that we were yet to ask for facts. Bard eventually struggled with facts, which is why a more in-depth version of the article became unfeasible, but that came later.
+
+### OK
+The writing was acceptable. Responses felt a bit dry, but writing in sustainability can be somewhat formal, so this was fine.
+
+Further details seem unnecessary. Bard is not a poet, but the writing was not terrible.
+
+### Question mark
+It was also possible to get an attempt at referencing from Bard, but we were disappointed by how difficult this was.
+
+[Bard does not automatically offer quotes unless it quotes extensively](https://www.seroundtable.com/google-bard-wont-link-to-sources-too-often-35097.html). This is less than ideal. Humans must provide references when paraphrasing from or quoting an external source irrespective of length.
+
+Unfortunately, Bard explicitly refused to quote at a more granular level:
+> **What is Environment, Social, and Governance (ESG)? Please quote your sources.**
+
+> I’m just a language model, so I can’t help you with that.
+
+The situation was puzzling. The ability to produce references when quoting extensively suggests an underlying capacity exists. Yet, Bard came across as determined to avoid using said capacity.
+
+So, we had to change our strategy and be more confrontational. Instead of asking for references as part of an initial prompt, we started asking for sources and examples after getting answers. 
+
+We got some results. For example, this is the request following Bard’s initial response to the prompt “What is Environment, Social, and Governance (ESG)?”:
+> **Thanks! Is your answer based on a specific source or on many sources of information?**
+
+> My answer is based on a variety of sources, including:
+
+> The CFA Institute’s website
+
+> The British Business Bank’s website
+
+> Wikipedia’s article on ESG investing
+
+> Investopedia’s article on ESG investing
+
+> PwC’s website on ESG
+
+> I have also used my own knowledge and experience to inform my answer. I am a large language model, trained on a massive dataset of text and code. This dataset includes a variety of information on ESG investing, including news articles, research papers, and financial reports. I have used this information to learn about the different aspects of ESG investing, and to develop my own understanding of the topic.
+
+> I am always learning, and I am always looking for new sources of information. If you have any additional information on ESG investing that you would like to share, please let me know.
+
+If Bard effectively used these sources to inform its answer, the response passes as promising. However, if Bard failed to connect this response to the content of previous responses, the list might simply refer to organisations likely to inform any ESG argument. Such a thing would amount to fabricating sources.
+
+We cannot say which of these two possibilities is playing out.
+
+### Bad
+Unfortunately, Bard’s inability to bring facts into the sound foundation it initially generated was the biggest disappointment. This inability ultimately forced us to edit significantly just to include some facts into the blog article. 
+
+We expected Bard to get historical data right because it can connect to the Internet. Yet…
+
+We asked Bard for examples of investors using ESG. It quoted Blackrock in two answers. The first time, it quoted Blackrock as having over $9 trillion in assets under management (AUM). The second time, Blackrock came out as having over $7 trillion in AUM. Both answers are technically correct, but the second is dated. Blackrock has had over $7 trillion AUM [for about five years](https://www.statista.com/statistics/891292/assets-under-management-blackrock/). That said, [Blackrock hit the $9 trillion mark in 2021](https://s24.q4cdn.com/856567660/files/doc_financials/2023/ar/BLK_AR22.pdf), [dipped below this threshold in 2022, but only slightly ($8.6 trillion)](https://www.caproasia.com/2023/01/19/world-2nd-largest-asset-manager-blackrock-aum-falls-to-8-59-trillion-in-2022-from-10-trillion-in-2021-institutional-aum-at-4-1-trillion-843-billion-in-retail-2-9-trillion-etfs-671-billion-c/), and [reached $9 trillion again in the first quarter of 2023](https://s24.q4cdn.com/856567660/files/doc_financials/2023/Q1/BLK-1Q23-Earnings-Release.pdf). As such, the $7 trillion number has been dated for about three years already. 
+
+We also expected Bard to be able to produce statistics about a given topic. At the very least, we expected it to do better than GPT-4 due to, again, having access to the Internet. Yet…  
+
+In a fascinating coincidence, Bard struggled with the same statistic GPT-4 got wrong. When asked about the increasing popularity of ESG, GPT-4 wrote the following:
+> According to the Global Sustainable Investment Alliance (GSIA), sustainable investments grew by 15% between 2016 and 2018, reaching $30.7 trillion in assets under management globally.
+
+Bard, in turn, wrote the following.
+> Global sustainable assets under management reached $35.3 trillion in 2020, up from $22.9 trillion in 2019. (Source: Global Sustainable Investment Review 2021, Global Sustainable Investment Alliance)
+
+Both statements are incorrect due to mix-ups with the percentages and dates. GSIA reports a [34% increase between 2016 and 2018 for a total of $30.7 trillion at the start of 2018](http://www.gsi-alliance.org/wp-content/uploads/2019/03/GSIR_Review2018.3.28.pdf) or [15% growth between 2018 and 2020 for a 35.3 trillion total](https://www.gsi-alliance.org/wp-content/uploads/2021/08/GSIR-20201.pdf). GPT confused the percentage growth. Bard got the start date wrong.
+
+We gave Bard more opportunities to show its fact-gathering capacities. Alas, we could not corroborate many things Bard included in these responses. So, we limited ourselves only to facts that were easy to corroborate (there is no point in using an LLM if you still need to spend days fact-checking). There were not many.
+
+### Conclusion
+Bard surpassed expectations in ways we did not expect. Its initial general-knowledge answer felt mature from the outset. The writing was also better than expected. Truth be said, the initial general-knowledge response we got after just a few prompts would have made an amazing starting point for expanding manually. 
+
+Unfortunately, Bard under-performed in areas we expected better results. Bard’s referencing abilities remain a question mark. We were also disappointed with the inability to offer much in the way of verifiable facts. 
+
+AI fearmongers will probably use Bard’s current weaknesses to campaign against LLMs. We are approaching AI more constructively. Hallucinations are the Achilles’ Heel of LLMs. Everyone knows this. That said, asking for perfection from tools still in development is unhelpful and unrealistic. A better approach is to learn when and how to use these imperfect machines in the best way possible, which is what we are doing. 
+
+So, here’s where our mind currently is: 
+* We may opt for Bard if we need a general-knowledge response to serve as foundation for content we will expand with facts from separate research, because Bard’s performance felt superior to GPT-4’s in the very early stages of the process
+* We likely would choose GPT-4 for more automated content generation tasks, because while we got GPT-4 to correct (most) mistakes with prompts alone, the effort needed to fact-check and manually edit Bard’s content skyrocketed as we moved forward
+* We want to try out even more LLMs, so our mind may change.
+
+Not to say the above is the only use case for Bard. We also found Bard’s Internet connectivity gives it an exciting edge in the context of ESG analytics. Sort of. But this is a topic for another post. Stay tuned!
