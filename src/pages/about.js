@@ -75,7 +75,7 @@ const AboutPage = () => {
                                             <ul className="ps-0">
                                                 <li><a href="https://www.linkedin.com/company/polyzentrik/" target="_blank" rel="noreferrer" aria-label="Link to Linkedin"><BsLinkedin /></a></li>
                                                 <li><a href="https://github.com/jbolns" target="_blank" rel="noreferrer" aria-label="Link to GitHub"><BsGithub /></a></li>
-                                                <li><a href="tel:+358449175354" target="_blank" rel="noreferrer" aria-label="Link to telephone number"><BsTelephoneFill /></a></li>
+                                                <li><a href="tel:+358417049141" target="_blank" rel="noreferrer" aria-label="Link to telephone number"><BsTelephoneFill /></a></li>
                                                 <li><a href="mailto: hello@polyzentrik.com?SUBJECT=Hi!" target="_blank" rel="noreferrer" aria-label="Link to send email"><BsEnvelope /></a></li>
                                             </ul>
                                         </span>
