@@ -282,7 +282,8 @@ article h3 {
 
 .gatsby-image-wrapper img,
 .gatsby-image-wrapper-constrained img {
-    width: 101%;
+    width: 102%;
+    height: 102%;
 }
 
 

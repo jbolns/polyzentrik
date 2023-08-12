@@ -11,6 +11,9 @@ hero_image_alt: "A graphic of vector waves."
 hero_image_credit_text: "Adapted from Free SVG"
 hero_image_credit_link: "https://freesvg.org/"
 ---
+
+import EmbedComponent from '../../src/components/embed'
+
 We recently launched AI sustainability transcription services. 
 
 You can read more about the service [here](../../services/sustainability-transcriptions-ai/). 
@@ -31,7 +34,13 @@ Not bad! Not bad at all!
 <div class="container">
     <div class="row">
         <div class="col-12 col-lg-6 border border-1 p-1">
-            <iframe class="yt-embed" src="https://www.youtube-nocookie.com/embed/XAg8GOicRTs?start=630" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <EmbedComponent 
+                source = "YouTube"
+                directLink = "https://youtu.be/XAg8GOicRTs?start=630"
+                id = "XAg8GOicRTs?start=630"
+                terms = "https://policies.google.com/technologies/cookies"
+                embed = { <iframe class="yt-embed" src="https://www.youtube-nocookie.com/embed/XAg8GOicRTs?start=630" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> } 
+            />      
         </div>
         <div class="col-12 col-lg-6 border border-1 p-1">
             <details>
