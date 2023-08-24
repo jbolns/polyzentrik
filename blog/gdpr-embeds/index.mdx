@@ -1,0 +1,261 @@
+---
+title: "GDPR embeds"
+date: "2023-08-18"
+slug: "gdpr-embeds"
+type: "blog"
+categories: "polyzentrik"
+author: "J"
+author_link: "https://www.josebolanos.xyz/"
+hero_image: "./code.jpeg"
+hero_image_alt: "A graphic of vector waves."
+hero_image_credit_text: "Polyzentrik"
+hero_image_credit_link: "https://www.polyzentrik.com/"
+---
+
+import EmbedComponent from '../../src/components/embed'
+
+### One more step for privacy!
+We recently coded a React module that enables us to embed third-party content in a way we think is GDPR-friendly. The module also simplifies the management of third-party Cookie consents for us as website owners. 
+
+We are now taking general feedback before deciding if to make an open-source (npm) package out of it.
+
+*(This is not a technical overview. The post is for general audiences. The code is available via [Github](https://github.com/jbolns/polyzentrik).)*
+
+### The challenge
+Websites regularly embed content from other websites – for example, YouTube videos. Embeds often involve third-party cookies: the provider can serve Cookies to your visitors via the embed. 
+
+We have nothing against websites using Cookies as part of their embeds. They might legitimately need to do this. Regardless, embeds create a challenge for websites covered by the EU's GDPR and ePrivacy Directive (aka. the Cookie Law). 
+
+Currently, the options available to a website covered by EU legislation are (1) to avoid using embeds or (2) to ask consent for myriad third-party Cookies in case a user ends up on a page with an embed. The first alternative is not great for user experience. It limits what users get from your website. The second alternative is not great for privacy. It forces users to decide if to accept third-party Cookies before knowing if they need or want to see a specific embed.
+
+### Our current solution
+We coded and are currently using a React module that stops third-party embeds from loading Cookies until the user consents to the specific content. 
+
+The module works at the page level. Consent is not required unless the user lands on a page with an embed and is limited to the provider of the specific embed. 
+
+Additionally, the module does not track our visitors or place Cookies on their devices. Since third-party Cookies can't load unless the user consents to a specific embed, the Cookie itself is proof of consent. This simplifies management for us and spares the user from yet another Cookie.
+
+Since there is no single universal approach to embedding, the module allows embeds via three different mechanisms: oEmbed (an open protocol some websites support), resource ID (the unique bit of the URL that websites use to identify each video/post/etc.), and externally-generated embed code (the code the third-party website gives you after you click "share">"embed"). Alone, none of the mechanisms offers a complete solution. Together, they cover a significant number of possibilities.
+
+### Examples
+We cannot guarantee the module will work on all websites and for all needs. That said, the triple-mechanism approach means the module likely covers many possibilities.
+
+Thus far, we have tested it with the following providers: YouTube, Vimeo, Spotify, SoundCloud, TikTok, TED, Twitch, LinkedIn (partial functionality), Google Maps, Twitter, CodePen, Flickr, Reddit, SlideShare, and Tumblr. You can see examples below.
+
+*(To see the flow of Cookies, open your browser's code inspector, typically possible via "right click > inspect", go to "Storage" on Firefox or "Application" on Chrome, Opera, and Edge, and expand the "Cookies" section.)*
+
+<br />
+##### YouTube. 
+**Title:** The Long Story of How Neural Nets Got to Where They Are: A Conversation with Terry Sejnowski.
+
+**By:** Wolfram Alpha.
+
+**Reasons we like it:** One of our favourite AI videos ever. It is **very** long, but it contains so much knowledge! 
+
+<EmbedComponent 
+    type = "oEmbed"
+    provider = "YouTube"
+    link = "https://www.youtube.com/watch?v=XKC-4Tosdd8"
+    terms = "https://policies.google.com/privacy" />
+
+***
+
+<br />
+##### Vimeo
+**Title:** Earth to Earth - Aurora Borealis.
+
+**By:** Adam Buick.
+
+**Reasons we like it:** Such a pretty video! And we love the sound of rain in the beginning.
+<EmbedComponent 
+    type = "oEmbed"
+    provider = "Vimeo"
+    link = "https://vimeo.com/35736375"
+    terms = "https://vimeo.com/privacy" />
+***
+
+<br />
+##### Spotify
+**Title:** Today's Top Hits.
+
+**By:** Spotify.
+
+**Reasons we like it:** Good tunes. Good tunes.
+<EmbedComponent 
+    type = "oEmbed"
+    provider = "Spotify"
+    link = "https://open.spotify.com/playlist/37i9dQZF1DXcBWIGoYBM5M?si=7da20a67a7444be6"
+    terms = "https://www.spotify.com/uk/legal/privacy-policy/" />
+***
+
+<br />
+##### Soundcloud
+**Title:** Flickermood.
+
+**By:** Forss.
+
+**Reasons we like it:** Ran into it by accident. It is actually SoundCloud's test video for oEmbed. That said, we kept the tune because we love the organised chaos. 
+<EmbedComponent 
+    type = "oembed"
+    provider = "SoundCloud"
+    link = "https://soundcloud.com/forss/flickermood"
+    terms = "https://soundcloud.com/pages/privacy" />
+***
+
+<br />
+##### TikTok
+**Title:** Chocolate Bonsai!
+
+**By:** Amaury Guichon.
+
+**Reasons we like it:** Absolute stunning. Absolute delicious, probably. If you email and we don't answer, we just went out for a second to buy us some chocolate!
+<EmbedComponent 
+    type = "oembed"
+    provider = "TikTok"
+    link = "https://www.tiktok.com/@amauryguichon/video/7269789535960255790"
+    terms = "https://www.tiktok.com/legal/privacy-policy" />
+***
+
+<br />
+##### TED
+**Title:** The growing megafire crisis -- and how to contain it.
+
+**By:** George T. Whitesides.
+
+**Reasons we like it:** We are very concerned about the increasing frequency and gravity of megafires and think AI has a lot to offer in way of a solution. We will not be doing anything on this front for a few years. It's too expensive a project for us to handle at the moment. However, we are carefully listening to the conversation about it.
+<EmbedComponent 
+    type = "oembed"
+    provider = "TED"
+    link = "https://www.ted.com/talks/george_t_whitesides_the_growing_megafire_crisis_and_how_to_contain_it"
+    terms = "https://www.ted.com/about/our-organization/our-policies-terms/privacy-policy" />
+***
+
+<br />
+#### Twitch
+**Title:** Home radio telescope!
+
+**By:** Crashg1972.
+
+**Reasons we like it:** Twitch's has some very interesting stuff in addition to gaming channels. Exhibit A. Someone installed a radio telescope on their roof and you can listen to it. Cooooool!
+<EmbedComponent 
+    type = "id"
+    provider = "Twitch"
+    id = "channel=crashg1972"
+    terms = "https://www.twitch.tv/p/en/legal/privacy-notice/" />
+***
+
+<br />
+#### LinkedIn
+**Title:** The Marshmallow Challenge
+
+**By:** Polyzentrik
+
+**Reasons we like it:** We sometimes post very cool stuff on LinkedIn. Make our day by following us over there! 
+<EmbedComponent 
+    type = "id"
+    provider = "LinkedIn"
+    id = "7082577591383007233"
+    terms = "https://www.linkedin.com/legal/privacy-policy"
+/>
+***
+
+<br />
+#### Google Maps
+**Title:** Sammonlahden uimaranta.
+
+**By:** Google Maps.
+
+**Reasons we like it:** Coolest place in Lappeenranta, Finland! Ps. Polyzentrik is based in Lappeenranta.
+<EmbedComponent 
+    type = "id"
+    provider = "GMaps"
+    terms = "https://policies.google.com/privacy"
+    id = "!1m18!1m12!1m3!1d7082.760483789843!2d28.122349456241274!3d61.05501105922003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46909502993e348d%3A0x8fc14afeaa8fb67a!2sSammonlahden%20uimaranta!5e0!3m2!1sen!2suk!4v1692872497608!5m2!1sen!2suk"
+/>
+***
+
+<br />
+#### Twitter
+**Title:** Academics, sigh!
+
+**By:** J
+
+**Reasons we like it:** Our founder is hilarious, or so he thinks, at least. Do follow him on former-Twitter now XXX... Ehm, sorry, X.
+<EmbedComponent 
+    type = "code"
+    provider = "Twitter"
+    terms = "https://twitter.com/privacy"
+    code = {'<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Academics. We need new ideas.<br>Editors. Your manuscript is different. Reject.<br><br>🤷‍♂️🤷‍♂️🤷‍♂️</p>&mdash; Jose A Bolanos (@jbolns) <a href="https://twitter.com/jbolns/status/1568571930407587840?ref_src=twsrc%5Etfw">September 10, 2022</a></blockquote>'}
+    script = {"https://platform.twitter.com/widgets.js"}
+/>
+***
+
+<br />
+#### CodePen
+**Title:** Etaga.
+
+**By:** Dillon.
+
+**Reasons we like it:** So much colour. So much colour!
+<EmbedComponent 
+    type = "code"
+    provider = "CodePen"
+    terms = "https://blog.codepen.io/documentation/privacy-policy/"
+    code = {'<iframe height="300" style="width: 100%;" scrolling="no" title="Etaga" src="https://codepen.io/Dillo/embed/yLGNzLo?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"> See the Pen <a href="https://codepen.io/Dillo/pen/yLGNzLo"> Etaga</a> by Dillon (<a href="https://codepen.io/Dillo">@Dillo</a>) on <a href="https://codepen.io">CodePen</a>. </iframe>'}
+/>
+***
+
+<br />
+#### Flickr
+**Title:** Rio Celeste ...
+
+**By:** Bernard DuPont.
+
+**Reasons we like it:** Next time we go to Costa Rica, we got to visit Rio Celeste.
+<EmbedComponent 
+    type = "code"
+    provider = "Flickr"
+    terms = "https://www.flickr.com/help/privacy"
+    code = {'<a data-flickr-embed="true" data-header="true" data-footer="true" href="https://www.flickr.com/photos/berniedup/52371800512/" title="Rio Celeste ..."><img src="https://live.staticflickr.com/65535/52371800512_c8faca3659_c.jpg" width="800" height="360" alt="Rio Celeste ..."/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>'}
+/>
+***
+
+<br />
+#### Reddit
+**Title:** AI Cyberpunk is coming.
+
+**By:** Adesigne
+
+**Reasons we like it:** A little reminder about how **NOT** to use AI!
+<EmbedComponent 
+    type = "code"
+    provider = "Reddit"
+    terms = "https://www.reddit.com/policies/privacy-policy"
+    code = {'<blockquote class="reddit-embed-bq" style="height:500px" data-embed-height="500">      <a href="https://www.reddit.com/r/singularity/comments/15xz13h/ai_cyberpunk_is_coming/">AI Cyberpunk is Coming</a><br> by      <a href="https://www.reddit.com/user/adesigne">u/adesigne</a> in      <a href="https://www.reddit.com/r/singularity/">singularity</a>    </blockquote><script async="" src="https://embed.reddit.com/widgets.js" charset="UTF-8"></script>'}
+    script = {"https://embed.reddit.com/widgets.js"}
+/>
+***
+
+<br />
+#### SlideShare
+**Title:** You suck at PowerPoint.
+
+**By:** Jesse Desjardins.
+
+**Reasons we like it:** We realised after seeing this presentation that we actually suck at PowerPoint.
+<EmbedComponent 
+    type = "code"
+    provider = "SlideShare"
+    terms = "https://support.scribd.com/hc/en-us/articles/210129366-Privacy-policy"
+    code = {'<iframe src="https://www.slideshare.net/slideshow/embed_code/key/5ZVv89GNL5kiE2?startSlide=1" width="597" height="486" frameborder="0"   marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px;   margin-bottom:5px;max-width: 100%;" allowfullscreen></iframe><div style="margin-bottom:5px"><strong><a href="https://www.slideshare.net/jessedee/you-suck-at-powerpoint" title="You Suck At PowerPoint! by @jessedee" target="_blank">You Suck At PowerPoint! by @jessedee</a></strong> from <strong><a href="https://www.slideshare.net/jessedee" target="_blank">Jesse Desjardins - @jessedee</a></strong></div>'}    
+/>
+***
+
+<br />
+
+***
+
+### Conclusion!
+We are happy with our GDPR-aware embeds module. It allows us the functionality we want in a way that supports privacy. 
+
+That said, privacy is a complex matter. We therefore invite you to let us know what you think of this approach and if and how we can improve this module.

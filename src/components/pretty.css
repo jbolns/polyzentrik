@@ -520,11 +520,6 @@ details summary {
     font-variant: small-caps;
 }
 
-.yt-embed {
-    aspect-ratio: 16/9;
-    width: 100%;
-}
-
 .copy-r {
     font-size: x-small;
 }
@@ -533,6 +528,29 @@ details summary {
     background: transparent;
     margin-top: -14px;
 }
+
+.embedio {
+    margin: 0;
+}
+
+.embedio.tiktok iframe, .embedio.tiktok .tiktok-embed {
+    width: unset !important;
+    margin-left: 0;
+}
+
+.embedio.linkedin iframe {
+    width: 50%;
+    aspect-ratio: 9/16;
+}
+
+.embedio.youtube iframe, .embedio.ted iframe, .embedio.vimeo iframe, .embedio.twitch iframe {
+    aspect-ratio: 16/9;
+    width: 50%;
+    height: 50%;
+}
+
+
+
 
 /**************************************/
 /************* ANIMATIONS ************/
