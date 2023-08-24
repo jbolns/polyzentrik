@@ -21,7 +21,7 @@ const EmbedComponent = (props) => {
             )
         } else if (props.type.toLowerCase() === "id") {
             if (props.provider.toLowerCase() === "twitch") {
-                const parent = "localhost" // "www.polyzentrik.com" // Change this for the name of website hosting the embed.
+                const parent = "www.polyzentrik.com" // Change this for the name of website hosting the embed.
                 const linky = "https://player.twitch.tv/?" + props.id + "&parent=" + parent
                 return (
                     <div className="embedio twitch">
