@@ -4,4 +4,4 @@ src/images/graphics/build
 public/
 .aws-functions
 .env*
-utils/
+src/utils/stripe
