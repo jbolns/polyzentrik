@@ -12,17 +12,17 @@ const Post = ({ data, children }) => {
   const image = getImage(data.mdx.frontmatter.hero_image)
 
   return (
-    <Layout pageTitle="">
+    <Layout pageTitle={data.mdx.frontmatter.type}>
       <Container className={data.mdx.frontmatter.type}>
         <Row className="horizontal-section shadow">
           <Col lg={5} className="article-title">
             <h2 className="pzntrk my-0 pb-1">{data.mdx.frontmatter.title}</h2>
             <p className="small text-center my-0 pb-4 text-lg-end optional">By <a href={data.mdx.frontmatter.author_link} target="blank" rel="noreferrer">{data.mdx.frontmatter.author}</a>.</p>
-            <span className="float-end border-top optional top-sm" ><ShareComponent /></span>
+            <span className="float-end border-top top-sm" ><ShareComponent /></span>
           </Col>
-          <Col sm={12} lg={6} className="border-start border-bottom py-3 align-self-end post-title optional">
+          <Col sm={12} lg={6} className="border-start border-bottom py-3 align-self-end post-title">
             <GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt} />
-            <p className="my-0 py-0 small text-end">Image by <a href={data.mdx.frontmatter.hero_image_credit_link} target="blank" rel="noreferrer">{data.mdx.frontmatter.hero_image_credit_text}</a>.</p>
+            <p className="m-0 p-0 small">Image credits: <a href={data.mdx.frontmatter.hero_image_credit_link} target="blank" rel="noreferrer">{data.mdx.frontmatter.hero_image_credit_text}</a>.</p>
           </Col>
           <Col className="py-3 px-4 article-content">
             {children}

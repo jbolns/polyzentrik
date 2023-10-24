@@ -17,7 +17,7 @@ import texture from '../images/graphics/pat-gray.png'
 var pointer = new Vector2()
 const raycaster = new Raycaster();
 
-class BrandingScene extends React.Component {
+class Animation extends React.Component {
     componentDidMount() {
 
         // SET THE SCENE, & CAMERA, & RENDERER
@@ -273,4 +273,4 @@ class BrandingScene extends React.Component {
     }
 }
 
-export default BrandingScene
+export default Animation

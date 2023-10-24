@@ -1,13 +1,13 @@
 import * as React from 'react'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
-import PaymentsComponent from '../components/products/payments'
+import HelpUsHelpComponent from '../components/products/help-us-help'
 
 
 const GatewayPage = () => {
     return (
-        <Layout pageTitle='Online payments gateway'>
-            <PaymentsComponent />
+        <Layout pageTitle='Help us help'>
+            <HelpUsHelpComponent />
         </Layout >
     )
 }

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { Helmet } from "react-helmet"
 import axios from 'axios'
 import providers from '../utils/oembed-providers.json'
-import '../components/pretty.css'
 
 const OembedComponent = (props) => {
     var [data, setData] = useState()
