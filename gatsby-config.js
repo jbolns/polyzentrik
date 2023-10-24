@@ -8,7 +8,7 @@ module.exports = {
   },
   siteMetadata: {
     title: "Polyzentrik",
-    description: "Digital sustainability solutions",
+    description: "Better and more sustainable digital technologies",
     siteUrl: "https://www.polyzentrik.com",
     image: "/logo-banner.png"
   },
@@ -57,11 +57,15 @@ module.exports = {
     },
     {
       resolve: "gatsby-source-filesystem",
+      options: { name: `blog`, path: `${__dirname}/blog`, }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
       options: { name: `services`, path: `${__dirname}/services`, }
     },
     {
       resolve: "gatsby-source-filesystem",
-      options: { name: `blog`, path: `${__dirname}/blog`, }
+      options: { name: `resources`, path: `${__dirname}/resources`, }
     },
     {
       resolve: `gatsby-transformer-remark`,

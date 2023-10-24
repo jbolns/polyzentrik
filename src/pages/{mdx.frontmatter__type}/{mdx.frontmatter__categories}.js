@@ -10,7 +10,6 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
-import "../../components/pretty.css"
 
 const ContentPage = ({ location, data }) => {
   const path = location.pathname.split("/")
@@ -50,7 +49,7 @@ const ContentPage = ({ location, data }) => {
 
 
   // Now do the posts
-  if (path[1] === "services") {
+  if (path[1] === "s") {
     return (
       <Layout pageTitle={path[1] + ": " + path[2]}>
         <Container fluid className="horizontal-section shadow">
@@ -117,7 +116,7 @@ export const query = graphql`
   query {
     allMdx(
       sort: {frontmatter: {date: DESC}}
-      filter: {frontmatter: {type: {in: "blog"}}}
+      filter: {frontmatter: {type: {in: ["blog", "services", "resources"]}}}
       ) {
       nodes {
         frontmatter {

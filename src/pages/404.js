@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 import Row from 'react-bootstrap/Row'
-import "../components/pretty.css"
 
 const NotFoundPage = () => {
   return (

@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Helmet } from "react-helmet"
 import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
-import '../components/pretty.css'
 import OembedComponent from './oembed'
 
 const EmbedComponent = (props) => {

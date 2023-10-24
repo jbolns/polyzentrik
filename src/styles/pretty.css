@@ -18,7 +18,7 @@ html,
 /******* KEY HTML ELEMENTS **********/
 /************************************/
 body {
-    font-family: monospace, sans-serif, arial; 
+    font-family: monospace, sans-serif, arial;
 }
 
 .container-fluid {
@@ -68,6 +68,8 @@ blockquote {
 }
 
 .clearer {
+    display: block;
+    width: 100%;
     clear: both;
 }
 
@@ -82,6 +84,20 @@ blockquote {
     color: rgb(201, 19, 98);
 }
 
+.highlight {
+    padding: 3px 7px;
+    background: #d7fff3;
+    border: 1px dotted black;
+}
+
+.trigger .highlight {
+    padding: 0 1px;
+    background: none;
+    border: 0;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
 /**************************************/
 /*********** HEADER SECTION **********/
 /************************************/
@@ -91,11 +107,11 @@ header .main-nav {
     height: 3rem;
 }
 
-header .navbar-nav {
-    min-height: 3rem;
+header .navbar-nav,
+.logo h1 {
     background: black;
-    animation-name: left-right;
-    animation-duration: 0.7s;
+    animation-name: fade-in;
+    animation-duration: 1.7s;
     animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -103,8 +119,8 @@ header .nav-item {
     margin: auto 0;
     border-right: 1px dotted white;
     padding: 1px 7px;
-    animation-name: left-right;
-    animation-duration: 0.7s;
+    animation-name: fade-in;
+    animation-duration: 1.7s;
     animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -146,6 +162,7 @@ header .custom-toggler,
     border: 0;
     border-bottom: 1px dotted black;
     text-decoration: none;
+    text-transform: capitalize;
 }
 
 .categorical .active {
@@ -159,7 +176,7 @@ header .navbar-collapse {
 }
 
 .collapsing {
-    background: black;
+    
     animation-name: collapse-in-style;
     animation-duration: 1.5s;
     animation-timing-function: linear;
@@ -204,7 +221,8 @@ header #responsive-navbar-nav.show .linky .nav-item {
     margin-top: 3rem;
 }
 
-.scene {
+.scene,
+.logo {
     min-height: 60vh;
     background: black;
     background: linear-gradient(-45deg, #e73c7e, #8a6ae1, #8a6ae1, #23d5ab);
@@ -228,21 +246,54 @@ header #responsive-navbar-nav.show .linky .nav-item {
     }
 }
 
-.topper h1 {
-    margin-right: 0;
-    padding: 4rem 3rem 1rem 3rem;
-    border: 3px solid black;
-    border-top: 1px;
-    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
-    background-size: 300% 300%;
-    animation: more-gradient 10s ease-in-out infinite;
+.logo .gatsby-image-wrapper,
+.logo .gatsby-image-wrapper-constrained {
+    margin: 0 5% -2.4vh 0;
+}
+
+.logo .gatsby-image-wrapper img,
+.logo .gatsby-image-wrapper-constrained img {
+    max-height: 40vh;
+}
+
+.titlebar,
+.titlebar {
+    float: right;
+    margin: 0;
+    padding: 2.3vh 3% 1vh;
+    color: white;
+    background: black;
+    border: 1px dotted white;
+    border-bottom: 0;
+}
+
+.titlebar h1,
+.titlebar h2 {
+    margin: 0;
+}
+
+.titlebar h2 {
+    display: block;
+    font-family: tahoma, verdana, sans-serif;
+    font-size: small;
+    letter-spacing: 1px;
+}
+
+.scene h1 {
+    display: block;
+    border-top: 1px dotted white;
+}
+
+.trigger {
+    font-size: small;
+    margin: 0 10% 0 0;
 }
 
 /**************************************/
 /******** MAIN CONTENT AREA **********/
 /************************************/
 .titulazo {
-    visibility: hidden;
+    margin-top: 5em;
 }
 
 .horizontal-section {
@@ -253,8 +304,8 @@ header #responsive-navbar-nav.show .linky .nav-item {
     border-bottom: 1px solid #eee;
 }
 
-article h3 {
-    font-size: large;
+.bg-highlight {
+    background: #d7fff3;
 }
 
 .card {
@@ -269,8 +320,8 @@ article h3 {
     padding: 0;
 }
 
-.gatsby-image-wrapper,
-.gatsby-image-wrapper-constrained {
+main .gatsby-image-wrapper,
+main .gatsby-image-wrapper-constrained {
     background: white;
     width: 70% !important;
     margin: 0;
@@ -280,12 +331,11 @@ article h3 {
     transition: 0.7s;
 }
 
-.gatsby-image-wrapper img,
-.gatsby-image-wrapper-constrained img {
+main .gatsby-image-wrapper img,
+main .gatsby-image-wrapper-constrained img {
     width: 102%;
     height: 102%;
 }
-
 
 .card-title {
     width: 100%;
@@ -304,6 +354,49 @@ article h3 {
     color: white;
 }
 
+.card .cats,
+.card .additional {
+    display: block;
+    width: fit-content;
+    margin: -10px 0 14px;
+    padding: 3px 7px;
+    border: 1px dotted black;
+    text-transform: capitalize;
+}
+
+.card .additional {
+    border: 0;
+    margin-top: 14px;
+    padding: 0;
+    float: left;
+}
+
+.additional span {
+    border-bottom: 2px solid;
+}
+
+
+.additional span.status {
+    display: inline;
+    border-bottom: 0;
+}
+
+.open {
+    border-color: lightseagreen !important;
+}
+
+.operational {
+    border-color: dodgerblue !important;
+}
+
+.development {
+    border-color: goldenrod !important;
+}
+
+.ideation {
+    border-color: hotpink !important;
+}
+
 .card-text {
     background: white;
     margin: 0;
@@ -313,12 +406,10 @@ article h3 {
 }
 
 .more {
-    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+    background: white;
     font-variant: small-caps;
     color: black;
-    border: 1px dotted black;
-    background-size: 300% 300%;
-    animation: more-gradient 10s ease-in-out infinite;
+    border: 1px solid black;
 }
 
 .less {
@@ -329,21 +420,31 @@ article h3 {
     border: 1px dotted black;
 }
 
-@keyframes more-gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
+.conversation {
+    width: 90%;
+    margin: auto;
 }
 
-.services .optional {
+.conversation p {
+    display: block;
+    clear: both;
+    float: right;
+    background: white
+        /*#d7fff3*/
+    ;
+    padding: 7px;
+    margin: 4px auto;
+    border: 1px dotted black;
+    border-radius: 7px;
+}
+
+.conversation p.reply {
+    float: left;
+    background: black;
+    color: white;
+}
+
+.optional {
     display: none;
 }
 
@@ -353,28 +454,9 @@ article h3 {
 }
 
 .blog h2.pzntrk,
-.services h2.pzntrk {
-    font-size: x-large;
+.services h2.pzntrk,
+.resources h2.pzntrk {
     text-align: center;
-}
-
-.blog h3,
-.services h3 {
-    font-size: x-large;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.blog h4,
-.services h4 {
-    font-size: larger;
-    font-weight: 600;
-}
-
-.blog h5,
-.services h5 {
-    font-size: medium;
-    font-weight: 600;
 }
 
 .blog figcaption,
@@ -436,14 +518,61 @@ footer a {
 }
 
 footer ul {
-    margin: 21px auto 0;
     padding-left: 0
 }
 
 footer ul li {
-    display: block;
     list-style-type: none;
-    margin: 7px 0;
+    margin: 0;
+}
+
+.wordcloud {
+    display: none;
+    justify-content: right;
+}
+
+.wordcloud ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: end;
+    justify-content: end;
+    margin: 0;
+}
+
+.wordcloud li {
+    line-height: 1.3rem;
+    font-weight: 300;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.wordcloud .s1 {
+    --size: 1;
+}
+
+.wordcloud .s2 {
+    --size: 2;
+}
+
+.wordcloud .s3 {
+    --size: 3;
+}
+
+.wordcloud .s4 {
+    --size: 4;
+}
+
+.wordcloud .s5 {
+    --size: 5;
+}
+
+.wordcloud .s6 {
+    --size: 6;
+}
+
+.wordcloud li a {
+    font-size: calc(5/var(--size) * 0.3rem + 1rem);
+    margin: 0 7px;
+    text-decoration: none;
 }
 
 .lower-footer {
@@ -472,6 +601,10 @@ footer p {
     margin-right: 7px;
 }
 
+.small {
+    font-size: smaller;
+}
+
 .small svg {
     font-size: 1.5rem;
 }
@@ -491,7 +624,7 @@ footer p {
 }
 
 .content h2.hide,
-.hidey,
+.hidey, 
 .hidey-lg {
     display: none;
 }
@@ -500,9 +633,20 @@ details summary {
     margin-bottom: 14px;
 }
 
-.footnote {
+.footnote,
+.statustip {
     margin: 0 auto;
     font-size: smaller;
+}
+
+.statustip {
+    margin-left: -3px;
+    font-weight: 900;
+    cursor: pointer;
+    border: 0;
+    background: none;
+    vertical-align: super;
+    font-size: x-small;
 }
 
 .ascii pre {
@@ -529,11 +673,22 @@ details summary {
     margin-top: -14px;
 }
 
+.support {
+    background: white;
+}
+
+.nav-item.support a {
+    color: deeppink;
+    text-transform: uppercase;
+    font-family: Verdana;
+}
+
 .embedio {
     margin: 0;
 }
 
-.embedio.tiktok iframe, .embedio.tiktok .tiktok-embed {
+.embedio.tiktok iframe,
+.embedio.tiktok .tiktok-embed {
     width: unset !important;
     margin-left: 0;
 }
@@ -543,14 +698,14 @@ details summary {
     aspect-ratio: 9/16;
 }
 
-.embedio.youtube iframe, .embedio.ted iframe, .embedio.vimeo iframe, .embedio.twitch iframe {
+.embedio.youtube iframe,
+.embedio.ted iframe,
+.embedio.vimeo iframe,
+.embedio.twitch iframe {
     aspect-ratio: 16/9;
     width: 50%;
     height: 50%;
 }
-
-
-
 
 /**************************************/
 /************* ANIMATIONS ************/
@@ -583,6 +738,29 @@ main,
 @keyframes left-right {
     from {
         transform: translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotate(0deg);
+        background-color: #444;
+        opacity: 0;
+    }
+
+    50% {
+        background-color: rgb(138, 138, 138);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+.from-right {
+    animation-name: right-left;
+    animation-duration: 0.3s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes right-left {
+    from {
+        transform: translate3d(100%, 0, 0) scale3d(1, 1, 1) rotate(0deg);
         background-color: #444;
         opacity: 0;
     }
@@ -642,28 +820,17 @@ main,
 /************************************/
 
 @media screen and (min-width: 768px) {
-    .topper h1 {
-        font-size: 3rem;
-        margin-top: 0;
-        padding: 1rem 3rem;
-        color: white;
-        background: #000;
-        border: 1px dotted black;
-        border-top: 1px dotted white;
+    .logo {
+        padding-right: 14%;
     }
 
-    .titulazo {
-        visibility: visible;
-        margin-top: 1em;
-    }
-
-    .gatsby-image-wrapper,
-    .gatsby-image-wrapper-constrained {
+    main .gatsby-image-wrapper,
+    main .gatsby-image-wrapper-constrained {
         width: 90% !important;
     }
 
-    .gatsby-image-wrapper:hover,
-    .gatsby-image-wrapper-constrained:hover {
+    main .gatsby-image-wrapper:hover,
+    main .gatsby-image-wrapper-constrained:hover {
         border-top-left-radius: 30px;
         border-top-right-radius: 0;
         border-bottom-right-radius: 5px;
@@ -682,23 +849,13 @@ main,
         max-width: 60% !important;
     }
 
-    .services .article-title {
-        width: 100%;
-        margin-left: 0;
-    }
-
-    .blog h2.pzntrk,
-    .services h2.pzntrk {
-        font-size: xx-large;
-    }
-
-    .services h2.pzntrk {
-        text-align: left;
-    }
-
     .lower-footer ul li {
         display: inline-block;
         text-align: left;
+    }
+
+    .additional span.status {
+        display: block;
     }
 }
 
@@ -715,8 +872,8 @@ main,
         border-top: 0;
     }
 
-    .hidey-lg {
-        display: block;
+    .wordcloud {
+        display: flex;
     }
 
     .border-hidey {
@@ -731,8 +888,32 @@ main,
         min-width: 58%;
     }
 
-    .blog h2.pzntrk {
+    .blog h2.pzntrk,
+    .services h2.pzntrk,
+    .resources h2.pzntrk {
         text-align: right;
+    }
+
+    .card-title h3 {
+        font-size: large;
+    }
+
+    .blog h3,
+    .services h3,
+    .resources h3 {
+        font-size: large;
+    }
+
+    .blog h4,
+    .services h4,
+    .resources h4 {
+        font-size: medium;
+    }
+
+    .blog h5,
+    .services h5,
+    .resources h5 {
+        font-size: small;
     }
 
     .blog .gatsby-resp-image-wrapper {
@@ -742,6 +923,17 @@ main,
 
     .blog .gatsby-resp-image-wrapper:hover {
         max-width: 60% !important;
+    }
+
+    .hidey-lg {
+        display: block;
+    }
+}
+
+
+@media screen and (min-width: 1400px) {
+    .additional span.status {
+        display: inline;
     }
 }
 

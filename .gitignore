@@ -5,3 +5,4 @@ public/
 .aws-functions
 .env*
 src/utils/stripe
+archive/

@@ -20,34 +20,28 @@ const FooterComponent = () => {
     return (
         <div className="main-footer">
             <Container fluid>
-                <Row className="p-2">
-                    <Col md={6} className="">
+                <Row className="p-2 d-flex mb-0 pb-0">
+                    <Col lg={6}>
                         <Row>
                             <h1 className="pzntrk mb-0">{data.site.siteMetadata.title}</h1>
                             <p className="mt-0 small copy-r">&#169; {fecha().year}. All rights reserved.</p>
+                            <span className='small mt-1 mt-lg-5'>
+                                <p className='mb-0'>We try and lead by example.</p>
+                                <p className='mb-0'>This website is verifiably <a href="https://pagespeed.web.dev/analysis/https-www-polyzentrik-com/hef1ww54o2?form_factor=desktop" target="_blank" rel="noopener noreferrer" className='pink'>fast</a> and quite <a href="https://www.websitecarbon.com/website/polyzentrik-com/" target="_blank" rel="noopener noreferrer" className='pink'>sustainable</a>.</p>
+                                <p className='mb-0'>Also, it does not use Cookies. Browse in peace. We're not tracking you.</p>
+                            </span>
                         </Row>
                     </Col>
-                    <Col md={3} className='mt-3 mt-md-0'>
-                        <h2>Services</h2>
-                        <ul className="mt-0">
-                            <li className=""><Link to="/services/tailored/">Tailored software solutions</Link></li>
-                            <li className=""><Link to="/services/sustainability-reporting/">Sustainability reporting</Link></li>
-                            <li className=""><Link to="/services/web-development/">Website development</Link></li>
-                            <li className=""><Link to="/services/ai-content-strategy/">AI content strategy</Link></li>
-                            <li className=""><Link to="/services/ai-interviews-focus-groups/">AI interview & focus groups</Link></li>
-                            <li className=""><Link to="/services/ai-transcriptions/">AI transcriptions</Link></li>
-                            <li className=""><Link to="/services/sustainability-content-ai/">AI content for sustainability</Link></li>
-                        </ul>
-                    </Col>
-                    <Col className='mt-3 mt-md-0'>
-                        <h2>Site</h2>
-                        <ul className="mt-0">
-                            <li className=""><Link to="/">Home</Link></li>
-                            <li className=""><Link to="/blog/">Blog</Link></li>
-                            <li className=""><Link to="/services/">Services</Link></li>
-                            <li className=""><Link to="/roadmap/">Roadmap</Link></li>
-                            <li className=""><Link to="/about/">About & Contact</Link></li>
-                            <li className=""><Link to="/gateway/">Payments gateway</Link></li>
+                    <Col md={6} className='wordcloud mt-5 mt-md-0 text-end'>
+                        <ul>
+                            <li className="s2"><Link to="/">Home</Link></li>
+                            <li className="s1"><Link to="/resources/">Resources</Link></li>
+                            <li className="s3"><Link to="/services/">Services</Link></li>
+                            <li className="s4"><Link to="/blog/">Blog</Link></li>
+                            <li className="s5"><Link to="/roadmap/">Roadmap</Link></li>
+                            <li className="s6"><Link to="/about/">About&Contact</Link></li>
+                            <li className="s2"><Link to="/help-us-help/" className='pink'>Help us help</Link></li>
+                            <li className="s7"><Link to="/gateway/">Payments gateway</Link></li>
                         </ul>
                     </Col>
                 </Row>
