@@ -176,7 +176,7 @@ header .navbar-collapse {
 }
 
 .collapsing {
-    
+
     animation-name: collapse-in-style;
     animation-duration: 1.5s;
     animation-timing-function: linear;
@@ -362,6 +362,7 @@ main .gatsby-image-wrapper-constrained img {
     padding: 3px 7px;
     border: 1px dotted black;
     text-transform: capitalize;
+    color: black;
 }
 
 .card .additional {
@@ -381,7 +382,7 @@ main .gatsby-image-wrapper-constrained img {
     border-bottom: 0;
 }
 
-.open {
+.versioned {
     border-color: lightseagreen !important;
 }
 
@@ -624,7 +625,7 @@ footer p {
 }
 
 .content h2.hide,
-.hidey, 
+.hidey,
 .hidey-lg {
     display: none;
 }
@@ -837,6 +838,18 @@ main,
         margin-left: 10%;
     }
 
+    main .article-title .gatsby-image-wrapper,
+    main .article-title .gatsby-image-wrapper-constrained {
+        max-width: 600px;
+        border: 1px solid;
+        border-radius: 0;
+    }
+
+    main .article-title .gatsby-image-wrapper:hover,
+    main .article-title .gatsby-image-wrapper-constrained:hover {
+        margin: 0;
+    }
+
     .hidey {
         display: block;
     }
@@ -882,10 +895,6 @@ main,
 
     .inverse-hidey {
         display: none;
-    }
-
-    .blog .post-title {
-        min-width: 58%;
     }
 
     .blog h2.pzntrk,

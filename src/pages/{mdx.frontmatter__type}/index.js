@@ -115,9 +115,11 @@ const ContentPage = ({ location, data }) => {
                               <h3><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h3>
                             </Card.Title>
                             <Card.Text>
-                              <span className='cats highlight'>
-                                {node.frontmatter.categories.replace('-', ' ')}
-                              </span>
+                              <Link to={`/${node.frontmatter.type}/${node.frontmatter.categories}`}>
+                                <span className='cats highlight'>
+                                  {node.frontmatter.categories.replace('-', ' ')}
+                                </span>
+                              </Link>
                               <span className='clearer excerpt'>{node.excerpt}</span>
                               <span className='clearer'></span>
                               <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
