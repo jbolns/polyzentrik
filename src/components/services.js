@@ -65,9 +65,11 @@ const ServicesComponent = () => {
                               </Link></h4>
                           </Card.Title>
                           <Card.Text>
-                            <span className='cats highlight'>
-                              {node.frontmatter.categories.replace('-', ' ')}
-                            </span>
+                            <Link to={`/services/${node.frontmatter.categories}`}>
+                              <span className='cats highlight'>
+                                {node.frontmatter.categories.replace('-', ' ')}
+                              </span>
+                            </Link>
                             <span className='clearer excerpt'>{node.frontmatter.intro}</span>
                             <span className='clearer'></span>
                             <Link to={`/services/${node.frontmatter.slug}`}>

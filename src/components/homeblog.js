@@ -67,9 +67,11 @@ const HomeBlog = () => {
                           <h4 className='small'><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h4>
                         </Card.Title>
                         <Card.Text data-sal='zoom-out' data-sal-delay='200' data-sal-easing='ease'>
-                          <span className='cats highlight'>
-                            {node.frontmatter.categories.replace('-', ' ')}
-                          </span>
+                          <Link to={`/blog/${node.frontmatter.categories}`}>
+                            <span className='cats highlight'>
+                              {node.frontmatter.categories.replace('-', ' ')}
+                            </span>
+                          </Link>
                           <span className='clearer excerpt'>{node.excerpt}</span>
                           <span className='clearer'></span>
                           <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
