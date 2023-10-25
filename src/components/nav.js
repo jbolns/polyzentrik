@@ -43,7 +43,7 @@ const NavComponent = () => {
                         </Nav.Item>
                     </Nav>
                     <Nav className='linky'>
-                        <Nav.Item className='support'>
+                        <Nav.Item className='support bg-white'>
                             <Nav.Link href='/help-us-help/'>
                                 <span>Help us Help</span>
                             </Nav.Link>

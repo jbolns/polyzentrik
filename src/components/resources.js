@@ -78,7 +78,7 @@ const ResourcesComponent = () => {
                             <span className='clearer'></span>
                             <Link to={`/resources/${node.frontmatter.slug}`}>
                               <Button className='more float-end'>
-                                Read more
+                                Check resource
                               </Button>
                             </Link>
                           </Card.Text>
