@@ -675,13 +675,15 @@ details summary {
 }
 
 .support {
-    background: white;
+    border-radius: 14px;
 }
 
 .nav-item.support a {
-    color: deeppink;
+    color: #e60079;
     text-transform: uppercase;
+    text-decoration: underline;
     font-family: Verdana;
+    font-weight: 600;
 }
 
 .embedio {
@@ -936,6 +938,10 @@ main,
 
     .hidey-lg {
         display: block;
+    }
+
+    .support {
+        border-radius: 0;
     }
 }
 
