@@ -6,13 +6,13 @@ import {
     TelegramShareButton, TelegramIcon,
     WhatsappShareButton, WhatsappIcon,
     EmailShareButton, EmailIcon
-} from "react-share"
+} from 'react-share'
 
 const ShareComponent = () => {
     const shareUrl = window.location.href
 
     return (
-        <span className="socialShare">
+        <span className='socialShare'>
             <FacebookShareButton url={shareUrl}><FacebookIcon size={36}/></FacebookShareButton>
             <LinkedinShareButton url={shareUrl}><LinkedinIcon size={36} /></LinkedinShareButton>
             <TwitterShareButton url={shareUrl}><TwitterIcon size={36} /></TwitterShareButton>

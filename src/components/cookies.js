@@ -64,7 +64,7 @@ const CookiesComponent = () => {
             <p>For the Safari web browser, please visit this page from Apple: https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac </p>
             <p>For any other web browser, please visit your web browser’s official web pages.</p>
             <h5> Contact Us </h5>
-            <p>If you have any questions about these Terms and Conditions, You can contact us via any of the channels noted in Our <Link to="/about/">About & Contact section</Link>.</p>
+            <p>If you have any questions about these Terms and Conditions, You can contact us via any of the channels noted in Our <Link to='/about/'>About & Contact section</Link>.</p>
         </>
     )
 }

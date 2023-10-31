@@ -50,7 +50,7 @@ const PrivacyComponent = () => {
             <p>When You access the Service by or through a mobile device, We and Service Providers may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.</p>
             <p>We and Service Providers may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.</p>
             <p><em> Tracking Technologies and Cookies </em></p>
-            <p>Our use of Cookies is detailed in Our Cookies Policy. We approach Cookies on a "need-to-know" basis. By agreeing to this Privacy Policy You agree we may use Cookies to collect Your data. Cookies are needed in a wide variety of settings and, as such, We need to reserve the right to use Cookies. However, We do our best to minimise the use of Cookies and strive to only use Cookies to collect data we need (as opposed to collecting data indiscriminately "just in case" we can monetise it). The Cookies section contains information about the specific Data We currently collect via Cookies.</p>
+            <p>Our use of Cookies is detailed in Our Cookies Policy. We approach Cookies on a 'need-to-know' basis. By agreeing to this Privacy Policy You agree we may use Cookies to collect Your data. Cookies are needed in a wide variety of settings and, as such, We need to reserve the right to use Cookies. However, We do our best to minimise the use of Cookies and strive to only use Cookies to collect data we need (as opposed to collecting data indiscriminately "just in case" we can monetise it). The Cookies section contains information about the specific Data We currently collect via Cookies.</p>
             <h5> Use of Your Personal Data </h5>
             <p>The Company may use Personal Data for the following purposes:</p>
             <ul>
@@ -142,7 +142,7 @@ const PrivacyComponent = () => {
             <p>If your data is affected by a change to our Privacy Policy, We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the “Last updated” date at the top of this Privacy Policy.</p>
             <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
             <h5> Contact Us </h5>
-            <p>If you have any questions about these Terms and Conditions, You can contact us via any of the channels noted in Our <Link to="/about/">About & Contact section</Link>.</p>
+            <p>If you have any questions about these Terms and Conditions, You can contact us via any of the channels noted in Our <Link to='/about/'>About & Contact section</Link>.</p>
         </>
     )
 }
