@@ -10,9 +10,9 @@ import '../styles/pretty.css'
 const HomePage = () => {
   return (
     <Layout pageTitle='Welcome'>
+      <MissionComponent />
       <ResourcesComponent />
       <HomeBlog />
-      <MissionComponent />
       <ServicesComponent />
     </Layout >
   )

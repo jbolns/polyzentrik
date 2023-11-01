@@ -41,7 +41,7 @@ const HomeBlog = () => {
   const posts = data.allMdx.nodes
 
   return (
-    <Container fluid className='horizontal-section shadow bg-highlight'>
+    <Container fluid className='horizontal-section shadow'>
       <Row className='col-lg-10 offset-lg-1 col-xl-8 offset-xl-2'>
         <Col lg={3} className='d-flex'>
           <Container>
