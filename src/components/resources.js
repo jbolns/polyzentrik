@@ -32,7 +32,7 @@ const ResourcesComponent = () => {
   const posts = data.allMdx.nodes
 
   return (
-    <Container fluid className='horizontal-section shadow'>
+    <Container fluid className='horizontal-section shadow bg-highlight'>
       <Row>
         <Col className='col-lg-8 offset-lg-2'>
           <Container className='d-md-flex'>

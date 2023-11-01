@@ -52,6 +52,13 @@ a:hover {
     color: rgb(201, 19, 98) !important;
 }
 
+.btn:hover {
+    background-color: #d7fff3;
+    border: 1px dotted black;
+    color: black;
+    text-decoration: underline;
+}
+
 blockquote {
     margin: 7px 5%;
     font-style: italic;
@@ -429,7 +436,7 @@ main .gatsby-image-wrapper-constrained img {
 .conversation p {
     display: block;
     clear: both;
-    float: right;
+    float: left;
     background: white
         /*#d7fff3*/
     ;
@@ -440,9 +447,8 @@ main .gatsby-image-wrapper-constrained img {
 }
 
 .conversation p.reply {
-    float: left;
-    background: black;
-    color: white;
+    float: right;
+    background: #d7fff3;
 }
 
 .optional {

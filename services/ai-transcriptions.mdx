@@ -3,63 +3,54 @@ title: 'AI transcriptions'
 date: '2023-06-25'
 rank: '1.3'
 type: 'services'
-categories: 'support'
+categories: 'coding'
 slug: 'ai-transcriptions'
 intro: 'We can help you balance the time and costs of transcribing lengthy or many conversations.'
 author: 'J'
 author_link: 'https://www.josebolanos.xyz/'
-hero_image: 'images/cat-support.png'
-hero_image_alt: 'A logo/image of multicolor squares arranged stylistically'
-hero_image_credit_text: 'Adapted from Free SVG'
-hero_image_credit_link: 'https://freesvg.org/'
+hero_image: 'images/cat-coding.png'
+hero_image_alt: 'An illustration containing our logo and the words "services" and "coding"'
+hero_image_credit_text: "Polyzentrik"
+hero_image_credit_link: "https://www.polyzentrik.com/"
 ---
  
-Transcriptions are common in many settings. For instance, academic and market research often involves interviews that need to be transcribed, and transcription can help convert spoken interactions into data for advanced analytics. Seminars, panels, conferences – they can all be transcribed for easier dissemination.
+Transcriptions are common in many settings, often done using AI-enabled cloud-based services. 
 
-Since it takes a lot of time to transcribe things manually, AI-enabled cloud-based transcription services are becoming increasingly popular. While incredibly helpful in many circumstances, cloud-based transcriptions are not always optimal solutions:
-
-Costs can increase rapidly if audios are long or if there is many audios. 
-
-Privacy and ethical concerns can exist and be significant:
-* Do participants know their audios are being transcribed by third-parties?
-* Do participants know their audios are being transcribed using AI?
+While incredibly helpful in many circumstances, cloud-based transcriptions are not always optimal solutions. Costs can increase rapidly if the audios are long or if there are many audios. Additionally, privacy and ethical concerns can exist:
+* Do participants know third parties are transcribing their audios?
+* Do participants understand these third parties use AI?
 * Did participants consent to sharing personally identifiable information (PII) intentionally or unintentionally contained in the audios?
+* Are participants informed of the AI providers’ data policies and procedures?
 * Are researchers even allowed to ask for consent to use services that are not always clear in how they handle data?
 
+Sometimes (and we emphasise only sometimes), there is a need for AI transcription resources that at least partially address these challenges.
+
 ### Our (open) resources
-We have produced a set of scripts that can help individuals and organisations to undertake AI transcriptions in their own devices (on the 'edge', as the cool kids say).
+We have produced a set of scripts that can help individuals and organisations to undertake AI transcriptions locally (on the 'edge'). 
 
-The scripts have been tested on a decent (CORE i7, 16MB RAM) but still affordable (€500) computer. Waiting times are significant, up to 3 or 4 times the audio length for the most complex script. That said, the quality of outputs is very satisfactory – comparable to commercial alternatives.
+While we cannot guarantee there are no backdoors in the models or that data is fed back to model providers in a way we have been unable to ascertain, the scripts have been tested offline (without a connection to the internet)<sup>1</sup> on a decent (CORE i7, 16MB RAM) but still affordable (€500) computer. Waiting times are significant, but the quality of outputs is comparable to commercial alternatives.
 
-The scripts are available under an open-source license. 
-
-More information about is available [here](../../resources/local-transcriptions), and the scripts can be accessed via [GitHub](https://github.com/jbolns/transcription).
+The scripts are available under an open-source license. More information is available [here](../../resources/local-transcriptions), and the scripts are available via [GitHub](https://github.com/jbolns/transcription).
 
 ### Our services
-We offer AI transcription services that we run locally on our computers during off-working hours – pricing below.
+We can also help people, businesses, and organisations implement the scripts as part of their own infrastructure and, in select cases, handle transcriptions for them using our equipment.
 
-These can help people and organisations who do not have the time or knowledge to install or run the open-source scripts and trust us to take good care of their data. 
-
-There is limited availability. [**Get in touch**](mailto:hello@polyzentrik.com) to reserve availability!
+There is limited availability. [**Get in touch**](mailto:hello@polyzentrik.com) to reserve!
 
 <div class='container mb-4'>
     <div class='row'>
         <div class='col-12 col-lg-4 d-flex'>
             <div class='card d-flex'>
-                <h5 class='px-2 py-3 card-title'>Unstructured</h5>
+                <h4 class='px-2 py-3 card-title'>Implementation guidance</h4>
                 <span class='card-text'>
-                <p class='px-4'>A transcript presented as either a block of text (for analytics, e.g.) or in small fragments (for research, e.g.).</p>
-                <p class='px-4 mb-0'><strong>Models used:</strong></p>
+                <p class='px-4'>Non-coding guidance to help you or your IT team implement our scripts as part of your own infrastructure.</p>
+                <p class='px-4 mb-0'><strong>Requirements:</strong></p>
                 <ul class='mx-4 mt-0'>
-                    <li class=''>OpenAI’s Whisper.</li>
-                </ul>
-                <p class='px-4 mb-0'><strong>Available languages:</strong></p>
-                <ul class='mx-4 mt-0'>
-                    <li class=''>English</li>
-                    <li class=''>Spanish.</li>
+                    <li>Strong Python knowledge.</li>
+                    <li>Min. specs: Core i7, 16MB RAM.</li>
                 </ul>
                 <p class='mt-auto mb-0 p-2 text-end'>
-                    <button type='button' class='btn border-dark'>€1 p. audio (max. 30 min).<sup>1</sup></button>
+                    <button type='button' class='btn border-dark'>€150/hour.</button>
                 </p>
                 </span>
             </div>
@@ -67,21 +58,16 @@ There is limited availability. [**Get in touch**](mailto:hello@polyzentrik.com) 
 
         <div class='col-12 col-lg-4 d-flex'>
             <div class='card'>
-                <h5 class='px-2 py-3 card-title'>Segmented</h5>
+                <h4 class='px-2 py-3 card-title'>Implementation support</h4>
                 <span class='card-text'>
-                <p class='px-4'>A transcript split into paragraphs roughly based on speaker changes and pauses (no speaker identification).</p>
-                <p class='px-4 mb-0'><strong>Models used:</strong></p>
+                <p class='px-4'>Coding support to help you or your team implement and run our scripts as part of your own infrastructure.</p>
+                <p class='px-4 mb-0'><strong>Requirements:</strong></p>
                 <ul class='mx-4 mt-0'>
-                    <li class=''>OpenAI’s Whisper</li>
-                    <li class=''>Pyannote’s segmentation.</li>
-                </ul>
-                <p class='px-4 mb-0'><strong>Available languages:</strong></p>
-                <ul class='mx-4 mt-0'>
-                    <li class=''>English</li>
-                    <li class=''>Spanish.</li>
+                    <li>Some Python knowledge.</li>
+                    <li>Min. specs: Core i7, 16MB RAM.</li>
                 </ul>
                 <p class='mt-auto mb-0 p-2 text-end'>
-                    <button type='button' class='btn border-dark'>€2 p. audio (max. 30 min).<sup>1</sup></button>
+                    <button type='button' class='btn border-dark'>€180/hour.</button>
                 </p>
                 </span>
             </div>
@@ -89,21 +75,17 @@ There is limited availability. [**Get in touch**](mailto:hello@polyzentrik.com) 
 
         <div class='col-12 col-lg-4 d-flex'>
             <div class='card'>
-                <h5 class='px-2 py-3 card-title'>Diarised</h5>
+                <h4 class='px-2 py-3 card-title'>Managed transcriptions</h4>
                 <span class='card-text'>
-                <p class='px-4'>A transcript split into sections labelled by speaker, with start times.</p>
+                <p class='px-4'>Transcription performed with our own equipment, with a statement specifying privacy parameters.</p>
                 <p class='px-4 mb-0'><strong>Models used:</strong></p>
                 <ul class='mx-4 mt-0'>
-                    <li class=''>OpenAI’s Whisper.</li>
-                    <li class=''>Pyannote’s diarisation.</li>
-                </ul>
-                <p class='px-4 mb-0'><strong>Available languages:</strong></p>
-                <ul class='mx-4 mt-0'>
-                    <li class=''>English</li>
-                    <li class=''>Spanish</li>
+                    <li>Audio-to-Text: Whisper</li>
+                    <li>Segmentation: Pyannote</li>
+                    <li>Diarisation: Pyannote</li>
                 </ul>
                 <p class='mt-auto mb-0 p-2 text-end'>
-                    <button type='button' class='btn border-dark'>€3 p. audio (max. 30 min).<sup>1</sup></button>
+                    <button type='button' class='btn border-dark'>from €5 p. audio (max. 30 min).<sup>2</sup></button>
                 </p>
                 </span>
             </div>
@@ -114,4 +96,5 @@ There is limited availability. [**Get in touch**](mailto:hello@polyzentrik.com) 
 <br />
 <br />
 <p className='footnote'>...</p>
-<p className='footnote'>1 *Longer audios are possible* at a different rate.</p>
+<p className='footnote'>1 Excluding downloading and reloading or updating models as needed, which naturally requires a connection.</p>
+<p className='footnote'>2 Bulk pricing and longer audios are possible at a different rate.</p>

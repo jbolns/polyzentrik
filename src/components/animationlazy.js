@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Animation = React.lazy(() => import("./animation"))
+const Animation = React.lazy(() => import('./animation'))
 
 const AnimationLazy = () => {
   return (

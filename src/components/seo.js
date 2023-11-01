@@ -33,11 +33,11 @@ const Seo = ({ title, description, image }) => {
   return (
     <>
       <title>{seo.title}</title>
-      <meta property="og:title" content={seo.title} />
-      <meta name="description" content={seo.description} />
-      <meta property="og:description" content={seo.description} />
-      <meta name="image" content={seoImage} />
-      <meta property="og:image" content={seoImage} />
+      <meta property='og:title' content={seo.title} />
+      <meta name='description' content={seo.description} />
+      <meta property='og:description' content={seo.description} />
+      <meta name='image' content={seoImage} />
+      <meta property='og:image' content={seoImage} />
       
     </>
   )

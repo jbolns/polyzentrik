@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect } from 'react'
 import { Link, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
+import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 import Seo from '../../components/seo'
 import Layout from '../../components/layout'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
-import CategoriesComponent from "../../components/categories"
+import CategoriesComponent from '../../components/categories'
 
 const ContentPage = ({ location, data }) => {
   const path = location.pathname.slice(1, -1)
@@ -47,107 +46,80 @@ const ContentPage = ({ location, data }) => {
     setHasMore(isMore)
   }, [list]) //eslint-disable-line
 
+  const servicesWelcome = () =>
+    <Row className='col-8 offset-2'>
+      <p>These are our services. Get in touch if you can't find something that fully meets your needs. We cannot do everything at once, but we can help you with pretty much anything digital.</p>
+    </Row>
+
+  const resourcesWelcome = () =>
+    <Row className='col-8 offset-2'>
+      <p>These are our ongoing open-source or open-access projects. Each has or will produce resources for others to use.</p>
+    </Row>
+
+  const blogWelcome = () =>
+    <Row className='col-8 offset-2'>
+      <p>We sometimes publish fairly decent content about data, AI, and digital sustain­ability. Give it a read and let us know what you think!</p>
+    </Row>
+
 
   // Now do the posts
-  if (path === "g") {
-    return (
-      <Layout pageTitle={path} >
-        <Row className="horizontal-section shadow">
-          <Col lg={12}>
-            <Container>
-              <Row>
+  return (
+    <Layout pageTitle={path} >
+      <Container fluid>
+        {path === 'services' && servicesWelcome()}
+        {path === 'resources' && resourcesWelcome()}
+        {path === 'blog' && blogWelcome()}
+        <Row className='horizontal-section shadow'>
+          <Container className='col-10 mb-3 categorical'>
+            <CategoriesComponent />
+          </Container>
+          <Container className='col-10 offset-1'>
+            <ResponsiveMasonry columnsCountBreakPoints={{ 375: 1, 767: 2, 991: 3, 1199: 4, 1399: 5 }}>
+              <Masonry>
                 {
-                  posts.map(node => (
-                    <Col key={node.id} className="col-12 col-md-6 col-lg-4" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
-                      <Card >
-                        <article>
-                          <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
-                            <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt="Placeholder image" data-sal="zoom-out" data-sal-delay="400" data-sal-easing="ease" />
-                          </Link>
-                          <Card.Title className="pt-4 pb-2">
-                            <h3><Link to={`/services/${node.frontmatter.slug}`}> {node.frontmatter.title} </Link></h3>
+                  list.map(node => (
+                    <Card key={node.id} >
+                      <article className={node.frontmatter.categories}>
+                        <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
+                          <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt='Placeholder image' />
+                        </Link>
+                        <Card.Body>
+                          <Card.Title>
+                            <h3><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h3>
                           </Card.Title>
-                          <Card.Body>
-                            <Card.Text>
+                          <Card.Text>
+                            <Link to={`/${node.frontmatter.type}/${node.frontmatter.categories}`}>
                               <span className='cats highlight'>
                                 {node.frontmatter.categories.replace('-', ' ')}
                               </span>
-                              <span className='clearer excerpt'>{node.frontmatter.intro}</span>
-                              <span className='clearer'></span>
-                              <Link to={`/services/${node.frontmatter.slug}`}>
-                                <Button className="more float-end" >
-                                  Check service
-                                </Button>
-                              </Link>
-                            </Card.Text>
-                          </Card.Body>
-                        </article>
-                      </Card>
-                    </Col>
+                            </Link>
+                            <span className='clearer excerpt'>{node.excerpt}</span>
+                            <span className='clearer'></span>
+                            <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
+                              <Button className='more float-end'>
+                                Read full post
+                              </Button>
+                            </Link>
+                          </Card.Text>
+                        </Card.Body>
+                      </article>
+                    </Card>
                   ))
                 }
-              </Row>
-            </Container>
-          </Col>
+              </Masonry>
+            </ResponsiveMasonry>
+          </Container>
+          <Container className='text-center'>
+            {hasMore ? (
+              <Button onClick={handleLoadMore} variant='dark' className='bg-black big-p w-75 mt-3'>Click to load more.</Button>
+            ) : (
+              <span></span>
+            )}
+          </Container>
         </Row>
-      </Layout>
-    )
-  } else {
-    return (
-      <Layout pageTitle={path} >
-        <Container fluid>
-          <Row className="horizontal-section shadow" >
-            <Container className="col-10 mb-3 categorical">
-              <CategoriesComponent />
-            </Container>
-            <Container className="col-10 offset-1">
-              <ResponsiveMasonry columnsCountBreakPoints={{ 375: 1, 767: 2, 991: 3, 1199: 4, 1399: 5 }}>
-                <Masonry>
-                  {
-                    list.map(node => (
-                      <Card key={node.id} >
-                        <article className={node.frontmatter.categories}>
-                          <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
-                            <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt="Placeholder image" />
-                          </Link>
-                          <Card.Body>
-                            <Card.Title>
-                              <h3><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h3>
-                            </Card.Title>
-                            <Card.Text>
-                              <Link to={`/${node.frontmatter.type}/${node.frontmatter.categories}`}>
-                                <span className='cats highlight'>
-                                  {node.frontmatter.categories.replace('-', ' ')}
-                                </span>
-                              </Link>
-                              <span className='clearer excerpt'>{node.excerpt}</span>
-                              <span className='clearer'></span>
-                              <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
-                                <Button className="more float-end" >
-                                  Read full post
-                                </Button>
-                              </Link>
-                            </Card.Text>
-                          </Card.Body>
-                        </article>
-                      </Card>
-                    ))
-                  }
-                </Masonry>
-              </ResponsiveMasonry>
-            </Container>
-            <Container className="text-center">
-              {hasMore ? (
-                <Button onClick={handleLoadMore} variant="dark" className="bg-black big-p w-75 mt-3">Click to load more.</Button>
-              ) : (
-                <span></span>
-              )}
-            </Container>
-          </Row>
-        </Container>
-      </Layout>
-    )
-  }
+      </Container>
+    </Layout>
+  )
 }
 
 export const query = graphql`
@@ -177,8 +149,8 @@ export const query = graphql`
   }
 `
 export const Head = ({ location }) => (
-  <Seo title={"Polyzentrik > " + location.pathname.charAt(1).toUpperCase() + location.pathname.slice(2, -1)}
-    description="Read more in our website." />
+  <Seo title={'Polyzentrik > ' + location.pathname.charAt(1).toUpperCase() + location.pathname.slice(2, -1)}
+    description='Read more in our website.' />
 )
 
 export default ContentPage

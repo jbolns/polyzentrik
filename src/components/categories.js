@@ -39,15 +39,15 @@ const CategoriesComponent = () => {
 
   // Return a menu bar containing only applicable categories
   return (
-    <Navbar collapseOnSelect expand="lg" bg="white" variant="light" className="categorical rounded border border-dark" >
-      <Container fluid className="p-0">
-        <Navbar.Brand className="border-end border-dark px-2 py-1">Categories</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" className="custom-toggler" />
-        <Navbar.Collapse id="responsive-navbar-nav">
+    <Navbar collapseOnSelect expand='lg' bg='white' variant='light' className='categorical rounded border border-dark' >
+      <Container fluid className='p-0'>
+        <Navbar.Brand className='border-end border-dark px-2 py-1'>Categories</Navbar.Brand>
+        <Navbar.Toggle aria-controls='responsive-navbar-nav' className='custom-toggler' />
+        <Navbar.Collapse id='responsive-navbar-nav'>
           <Nav>
-            <Link to={`/${section}/`} activeClassName="active">All</Link>
+            <Link to={`/${section}/`} activeClassName='active'>All</Link>
             {categories.map(category => (
-              <Link key={category} to={`/${section}/${category}/`} activeClassName="active">{category.replace('-', ' ')}</Link>
+              <Link key={category} to={`/${section}/${category}/`} activeClassName='active'>{category.replace('-', ' ')}</Link>
             ))
             }
           </Nav>

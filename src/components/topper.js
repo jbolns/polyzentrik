@@ -15,8 +15,8 @@ const TopperComponent = () => {
     `)
 
     return (
-            <Container className="topper">
-                <h1 className="pzntrk float-end from-top">{data.site.siteMetadata.title}</h1>
+            <Container className='topper'>
+                <h1 className='pzntrk float-end from-top'>{data.site.siteMetadata.title}</h1>
             </Container>
     )
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Helmet } from "react-helmet"
+import { Helmet } from 'react-helmet'
 import axios from 'axios'
 import providers from '../utils/oembed-providers.json'
 
@@ -12,21 +12,21 @@ const OembedComponent = (props) => {
         }
     )
 
-    var oembedLink = endpoint[0].endpoints[0].url + "?url=" + props.link + "&format=json"
-    oembedLink = oembedLink.replace(".{format}", ".json")
+    var oembedLink = endpoint[0].endpoints[0].url + '?url=' + props.link + '&format=json'
+    oembedLink = oembedLink.replace('.{format}', '.json')
 
     useEffect(() => {
         axios.get(oembedLink).then(response => { setData(response.data.html) })
     }, [oembedLink])
 
-    if (props.provider.toLowerCase() === "tiktok") {
-        var dict = { tiktok: "https://www.tiktok.com/embed.js" }
+    if (props.provider.toLowerCase() === 'tiktok') {
+        var dict = { tiktok: 'https://www.tiktok.com/embed.js' }
         return (
             <>
                 <div dangerouslySetInnerHTML={{ __html: data }} />
                 <Helmet>
                     <script src={dict[props.provider.toLowerCase()]} 
-                    type="text/javascript" 
+                    type='text/javascript' 
                     async />
                 </Helmet>
             </>

@@ -13,8 +13,8 @@ const BrandingComponent = () => {
     console.log('loading logo')
     return (
       <section>
-        <Container fluid className="text-center">
-          <Row className="logo">
+        <Container fluid className='text-center'>
+          <Row className='logo'>
             <React.Suspense fallback={<></>}>
               <LogoLazy />
             </React.Suspense>
@@ -27,8 +27,8 @@ const BrandingComponent = () => {
     console.log('loading animation')
     return (
       <section>
-        <Container fluid className="text-center">
-          <Row className="scene">
+        <Container fluid className='text-center'>
+          <Row className='scene'>
             <React.Suspense fallback={<></>}>
               <AnimationLazy />
             </React.Suspense>
