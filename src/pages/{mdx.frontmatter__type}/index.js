@@ -48,7 +48,7 @@ const ContentPage = ({ location, data }) => {
 
   const servicesWelcome = () =>
     <Row className='col-8 offset-2'>
-      <p>These are our services. Get in touch if you can't find something that fully meets your needs. We cannot do everything at once, but we can help you with pretty much anything digital.</p>
+      <p>Our services are driven by an interest in reducing resource-utilisation across the entire chain. This helps build solutions that perform, are cost-efficient, and keep society and the environment in mind.</p>
     </Row>
 
   const resourcesWelcome = () =>

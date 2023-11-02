@@ -44,8 +44,8 @@ const ServicesComponent = () => {
             <Col className='mb-5 col-12 col-md-4'>
               <Container data-sal='slide-up' data-sal-delay='200' data-sal-easing='ease'>
                 <h3 className='pzntrk'>Top services</h3>
-                <p>We also offer a wide variety of services.</p>
                 <p>We cannot do everything at once, but we can help you with pretty much anything digital.</p>
+                <p>We consider resource-utilisation across the entire chain, which helps build solutions that perform, are cost-efficient, and keep society and the environment in mind.</p>
                 <Link to={`/services/`}>
                   <Button className='less float-en'>See all services</Button>
                 </Link>
