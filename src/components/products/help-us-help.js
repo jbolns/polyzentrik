@@ -30,8 +30,8 @@ const HelpUsHelpComponent = () => {
                 <Row className='linky d-flex'>
                   <span className='my-3' data-sal='slide-up' data-sal-delay='400' data-sal-easing='ease'>
                     <h4>Help us help</h4>
-                    <p>You can help us spend more time in open-source and open-access resources by clicking on the button below and making a small donation via Stripe.<sup>1</sup></p>
-                    <p>To thank you, we will add your name to the list of 'supporters' in the project benefiting from your support.<sup>2</sup></p>
+                    <p>You can help us spend more time in open-source and open-access resources by clicking on the button below and making a small payment via Stripe.<sup>1</sup></p>
+                    <p>To reward you, we will add your name to the list of 'supporters' in the project benefiting from your support.<sup>2</sup> If your payment is larger than €100 and you include your physical address, we will also send you a thank you letter via regular mail.</p>
                     <div className='my-2 text-end'>
                       <a href='https://buy.stripe.com/28o16Fci381F7LOeUX' target='_blank' rel='noreferrer noopener'>
                         <Button className='more border-secondary shadow w-75'>
@@ -41,12 +41,12 @@ const HelpUsHelpComponent = () => {
                       <p className='small'><Link to='/terms-conditions'>Terms & Conditions</Link></p>
                     </div>
                     <br />
-                    <p>The amount is completely up to you. Since they address challenges without clear-cut solutions, our open-source/access projects take thousands of $/£/€ in human hours. Any little bit helps.<sup>3</sup></p>
+                    <p>The amount is completely up to you. Our open-source/access projects take thousands of $/£/€ in human hours.<sup>3</sup></p>
                   </span>
                   <span className='mb-3' data-sal='slide-up' data-sal-delay='400' data-sal-easing='ease'>
                     <h5>Notes</h5>
                     <p className='small my-0'>1. By clicking the button you accept the applicable sections of our <Link to='/terms-conditions'>Terms & Conditions</Link>. Payments are final.</p>
-                    <p className='small my-0'>2. For small donations, we choose the project. <a href='mailto: hello@polyzentrik.com?SUBJECT=I would like to support a specific project!' target='_blank' rel='noreferrer' aria-label='Link to send email'>Get in touch</a> if you want to support a specific project.</p>
+                    <p className='small my-0'>2. For small payments, we choose the project. <a href='mailto: hello@polyzentrik.com?SUBJECT=I would like to support a specific project!' target='_blank' rel='noreferrer' aria-label='Link to send email'>Get in touch</a> if you want your payment to benefit a specific project.</p>
                     <p className='small my-0'>3. We would, of course, be delighted if you want to support a full project. <a href='mailto: hello@polyzentrik.com?SUBJECT=I would like to support a full project!' target='_blank' rel='noreferrer' aria-label='Link to send email'>Get in touch</a> to discuss full-project contributions.</p>
                   </span>
                 </Row>
