@@ -14,7 +14,7 @@ const GatewayPage = () => {
 
 export const Head = () => (
     <Seo title='Polyzentrik > Help us help'
-        description='Help us build tools that support others in building better and more sustainable digital technologies.' />
+        description='Online payments gateway.' />
 )
 
 export default GatewayPage

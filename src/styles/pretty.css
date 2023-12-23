@@ -389,7 +389,7 @@ main .gatsby-image-wrapper-constrained img {
     border-bottom: 0;
 }
 
-.versioned {
+.open-source {
     border-color: lightseagreen !important;
 }
 
@@ -448,7 +448,7 @@ main .gatsby-image-wrapper-constrained img {
 
 .conversation p.reply {
     float: right;
-    background: #d7fff3;
+    background: aquamarine;
 }
 
 .optional {
@@ -506,6 +506,10 @@ main .gatsby-image-wrapper-constrained img {
 .roadmap .ascii {
     max-height: 600px;
     overflow: auto;
+}
+
+.reverse {
+    flex-direction: row-reverse;
 }
 
 /**************************************/
@@ -878,9 +882,14 @@ main,
     .additional span.status {
         display: block;
     }
+    
 }
 
 @media screen and (min-width: 992px) {
+    .reverse {
+        flex-direction: row-reverse;
+    }
+    
     header .dropdown-menu {
         text-align: left;
     }

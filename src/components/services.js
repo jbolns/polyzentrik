@@ -12,7 +12,7 @@ const ServicesComponent = () => {
       allMdx(
         sort: {frontmatter: {rank: ASC}}
         filter: {frontmatter: {type: {eq: "services"}}}
-        limit: 6) 
+        limit: 4) 
         {
           nodes {
             id
@@ -37,25 +37,24 @@ const ServicesComponent = () => {
   const posts = data.allMdx.nodes
 
   return (
-    <Container fluid className='horizontal-section shadow bg-highlight'>
+    <Container fluid className='horizontal-section shadow'>
       <Row>
         <Col className='col-lg-8 offset-lg-2'>
           <Container className='d-md-flex'>
-            <Col className='mb-5 col-12 col-md-4'>
+            <Col className='col-12 col-md-4'>
               <Container data-sal='slide-up' data-sal-delay='200' data-sal-easing='ease'>
-                <h3 className='pzntrk'>Top services</h3>
-                <p>We cannot do everything at once, but we can help you with pretty much anything digital.</p>
-                <p>We consider resource-utilisation across the entire chain, which helps build solutions that perform, are cost-efficient, and keep society and the environment in mind.</p>
-                <Link to={`/services/`}>
-                  <Button className='less float-en'>See all services</Button>
-                </Link>
+                <h3 className='pzntrk'>Top Services</h3>
+                <p>And while we cannot do everything at once, we can help you with pretty much anything digital.</p>
+                <p>We consider resource-utilisation across the entire chain, which helps build solutions that are cost-efficient and keep society and the environment in mind.</p>
+                <p>No need to take our word for it. Check our site's performance and sustainability scores. Do the same for competitors.</p>
+                <p></p>
               </Container>
             </Col>
-            <Col className='col-12 col-md-9'>
+            <Col className='col-12 col-md-8'>
               <Container className='d-md-flex flex-wrap'>
                 {
                   posts.map(node => (
-                    <Col key={node.id} className='col-12 col-md-6 offset-md-0 col-xl-4' data-sal='slide-up' data-sal-delay='400' data-sal-easing='ease'>
+                    <Col key={node.id} className='col-12 col-md-6 offset-md-0' data-sal='slide-up' data-sal-delay='400' data-sal-easing='ease'>
                       <Card variant='top' className='h-100'>
                         <Card.Body>
                           <Card.Title data-sal='zoom-out' data-sal-delay='400' data-sal-easing='ease'>
@@ -84,7 +83,12 @@ const ServicesComponent = () => {
                   ))
                 }
               </Container>
+              <Link to={`/services/`}>
+                <Button className='mt-5 less float-end'>See all services</Button>
+              </Link>
             </Col>
+
+
           </Container>
         </Col>
       </Row>

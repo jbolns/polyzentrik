@@ -11,9 +11,9 @@ const ResourcesComponent = () => {
   const data = useStaticQuery(graphql
     `query {
       allMdx(
-        sort: {frontmatter: {rank: DESC}}
+        sort: {frontmatter: {date: DESC}}
         filter: {frontmatter: {type: {eq: "resources"}}}
-        limit: 9) 
+        limit: 3) 
         {
           nodes {
             id
@@ -35,13 +35,11 @@ const ResourcesComponent = () => {
     <Container fluid className='horizontal-section shadow bg-highlight'>
       <Row>
         <Col className='col-lg-8 offset-lg-2'>
-          <Container className='d-md-flex'>
-            <Col className='mb-5 col-12 col-md-4'>
+          <Container className='d-flex flex-column flex-md-row-reverse'>
+            <Col className='mb-5 col-12 col-md-3'>
               <Container data-sal='slide-up' data-sal-delay='200' data-sal-easing='ease'>
-                <h3 className='pzntrk'>Resources</h3>
-                <p>Our mission is to help others do digital things better and more sustainably.</p>
-                <p>These are our ongoing projects.</p>
-                <p>Each has or will produce open-source or open-access resources for others to use.</p>
+                <h3 className='pzntrk'>Open-source</h3>
+                <p>We also produce open-source resources that can help others build better and more sustainable digital technologies.</p>
                 <Link to={`/resources/`}>
                   <Button className='less float-end'>See all resources</Button>
                 </Link>
@@ -52,7 +50,7 @@ const ResourcesComponent = () => {
               <Container className='d-md-flex flex-wrap'>
                 {
                   posts.map(node => (
-                    <Col key={node.id} className='col-12 col-md-6 offset-md-0 col-xl-4' data-sal='slide-up' data-sal-delay='400' data-sal-easing='ease'>
+                    <Col key={node.id} className='col-12 col-lg-4 offset-md-0' data-sal='slide-up' data-sal-delay='400' data-sal-easing='ease'>
                       <Card variant='top' className='h-100'>
                         <Card.Body>
                           <Card.Title data-sal='zoom-out' data-sal-delay='400' data-sal-easing='ease'>
