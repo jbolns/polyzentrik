@@ -5,17 +5,17 @@ import Col from 'react-bootstrap/Col'
 
 const MissionComponent = () => {
     return (
-        <Container fluid className='horizontal-section shadow'>
+        <Container fluid className='horizontal-section shadow bg-highlight'>
             <Row className='col-10 offset-1 conversation'>
                 <Col className='col-10 offset-1 col-lg-5 offset-lg-1 offset-lg-0'>
-                    <h3 className='pzntrk mb-3'>Our work</h3>
+                    <h3 className='pzntrk mb-3'>Our mission & strategy</h3>
                     <p className='reply'>What's polyzentrik?</p>
                     <p>Polyzentrik is a mission- rather than product-oriented company.</p>
                     <p className='reply'>What's this mission?</p>
                     <p><strong>To help build better and more sustainable digital technologies</strong>.</p>
                     <p className='reply'>How?</p>
                     <p>... We don't know the full answer to this question. No one does!</p>
-                    <p>That said, our long-term strategy is to make many small good things that add up to a toolkit for building digital technologies more ethically and more sustainably. We might also, in due course, think about certifying systems using these or equally-ethical/sustainable resources.</p>
+                    <p>That said, our long-term strategy is to make many small good things that add up to a toolkit for building digital technologies more ethically and sustainably. We might also, in due course, think about certifying systems using these or equally-ethical/sustainable resources.</p>
                 </Col>
                 <Col className='col-10 offset-1 col-lg-5 offset-lg-0'>
                     <p className='reply'>And short-term, how can you help already today?</p>

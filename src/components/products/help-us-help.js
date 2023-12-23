@@ -23,19 +23,16 @@ const HelpUsHelpComponent = () => {
                   <h3 className='pzntrk'>Our biggest dilemma</h3>
                   <p>Every minute we invest in commercial tasks is a minute not spent in open-source or open-access resources.</p>
                   <p>It is no more complex than that.</p>
-                  <p>Over time, we hope to partially fund development of open-source or open-access resources from commercial projects. Also, some of the open-access resources <strong><u>will</u></strong> have licenses that might eventually bring in revenue.</p>
-                  <p>However, it's still too early for any of that.</p>
-                  <p>At the moment, it's a minute-by-minute situation. We do one or the other.</p>
                 </Row>
                 <Row className='linky d-flex'>
                   <span className='my-3' data-sal='slide-up' data-sal-delay='400' data-sal-easing='ease'>
                     <h4>Help us help</h4>
-                    <p>You can help us spend more time in open-source and open-access resources by clicking on the button below and making a small payment via Stripe.<sup>1</sup></p>
-                    <p>To reward you, we will add your name to the list of 'supporters' in the project benefiting from your support.<sup>2</sup> If your payment is larger than €100 and you include your physical address, we will also send you a thank you letter via regular mail.</p>
+                    <p>Help us spend more time in open-source/access resources by making a voluntary payment for usage of WEIRD or any other of our open-source resources.<sup>1</sup> Payments are handled via Stripe.<sup>2</sup></p>
+                    <p>If you add the necessary information in the payment form, we will, provided we deem the information valid and apropriate, add you to the list of supporters of the resource your payment relates to.</p>
                     <div className='my-2 text-end'>
                       <a href='https://buy.stripe.com/28o16Fci381F7LOeUX' target='_blank' rel='noreferrer noopener'>
                         <Button className='more border-secondary shadow w-75'>
-                          Help us help
+                          Pay
                         </Button>
                       </a>
                       <p className='small'><Link to='/terms-conditions'>Terms & Conditions</Link></p>
@@ -45,8 +42,8 @@ const HelpUsHelpComponent = () => {
                   </span>
                   <span className='mb-3' data-sal='slide-up' data-sal-delay='400' data-sal-easing='ease'>
                     <h5>Notes</h5>
-                    <p className='small my-0'>1. By clicking the button you accept the applicable sections of our <Link to='/terms-conditions'>Terms & Conditions</Link>. Payments are final.</p>
-                    <p className='small my-0'>2. For small payments, we choose the project. <a href='mailto: hello@polyzentrik.com?SUBJECT=I would like to support a specific project!' target='_blank' rel='noreferrer' aria-label='Link to send email'>Get in touch</a> if you want your payment to benefit a specific project.</p>
+                    <p className='small my-0'>1. Payments are final and confirm satisfaction with products/services.</p>
+                    <p className='small my-0'>2. By clicking the button you accept the applicable sections of our <Link to='/terms-conditions'>Terms & Conditions</Link>.</p>
                     <p className='small my-0'>3. We would, of course, be delighted if you want to support a full project. <a href='mailto: hello@polyzentrik.com?SUBJECT=I would like to support a full project!' target='_blank' rel='noreferrer' aria-label='Link to send email'>Get in touch</a> to discuss full-project contributions.</p>
                   </span>
                 </Row>
