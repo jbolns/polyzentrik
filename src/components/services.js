@@ -43,7 +43,7 @@ const ServicesComponent = () => {
           <Container className='d-md-flex'>
             <Col className='col-12 col-md-4'>
               <Container data-sal='slide-up' data-sal-delay='200' data-sal-easing='ease'>
-                <h3 className='pzntrk'>Top Services</h3>
+                <h3 className='pzntrk'>Services</h3>
                 <p>And while we cannot do everything at once, we can help you with pretty much anything digital.</p>
                 <p>We consider resource-utilisation across the entire chain, which helps build solutions that are cost-efficient and keep society and the environment in mind.</p>
                 <p>No need to take our word for it. Check our site's performance and sustainability scores. Do the same for competitors.</p>
