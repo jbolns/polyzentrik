@@ -35,18 +35,18 @@ const ResourcesComponent = () => {
     <Container fluid className='horizontal-section shadow bg-highlight'>
       <Row>
         <Col className='col-lg-8 offset-lg-2'>
-          <Container className='d-flex flex-column flex-md-row-reverse'>
-            <Col className='mb-5 col-12 col-md-3'>
+          <Container className='d-xl-flex'>
+            <Col className='mb-5 col-12 col-xl-4'>
               <Container data-sal='slide-up' data-sal-delay='200' data-sal-easing='ease'>
-                <h3 className='pzntrk'>Open-source</h3>
-                <p>We also produce open-source resources that can help others build better and more sustainable digital technologies.</p>
+                <h3 className='pzntrk'>Open-source resources</h3>
+                <p>We produce open-source resources that can help others build better and more sustainable digital technologies.</p>
                 <Link to={`/resources/`}>
                   <Button className='less float-end'>See all resources</Button>
                 </Link>
                 <span className='clearer'></span>
               </Container>
             </Col>
-            <Col className='col-12 col-md-9'>
+            <Col className='col-12 col-xl-8'>
               <Container className='d-md-flex flex-wrap'>
                 {
                   posts.map(node => (

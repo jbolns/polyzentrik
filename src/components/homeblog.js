@@ -42,11 +42,11 @@ const HomeBlog = () => {
 
   return (
     <Container fluid className='horizontal-section shadow'>
-      <Row className='col-lg-10 offset-lg-1 col-xl-8 offset-xl-2'>
-        <Col lg={3} className='d-flex'>
+      <Row className='col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 flex-column flex-md-row-reverse'>
+        <Col lg={3}>
           <Container>
             <h3 className='pzntrk' data-sal='slide-up' data-sal-delay='200' data-sal-easing='ease'>Latest from our blog</h3>
-            <p className='word-breakie' data-sal='slide-up' data-sal-delay='200' data-sal-easing='ease'>We publish fairly decent content about data, AI, and digital sustain&shy;ability.</p>
+            <p className='word-breakie' data-sal='slide-up' data-sal-delay='200' data-sal-easing='ease'>We also publish fairly decent content about data, AI, and digital sustain&shy;ability.</p>
             <Link to={`/blog/`}>
               <Button className='less' data-sal='slide-up' data-sal-delay='200' data-sal-easing='ease'>Go to blog</Button>
             </Link>
@@ -54,7 +54,7 @@ const HomeBlog = () => {
         </Col>
         <Col lg={9}>
           <Container>
-            <Row className='d-flex'>
+            <Row>
               {
                 posts.map(node => (
                   <Col key={node.id} md={4} className='px-0 my-md-auto'>
