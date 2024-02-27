@@ -26,14 +26,14 @@ const AboutPage = () => {
                   </ul>
                 </span>
                 <span className='hidey-lg'>
-                <Tabs defaultActiveKey='education' id='left-tabs' className='small' data-sal='slide-up' data-sal-delay='400' data-sal-easing='ease'>
+                <Tabs defaultActiveKey='education' id='left-tabs' className='small mb-3' data-sal='slide-up' data-sal-delay='400' data-sal-easing='ease'>
                   <Tab eventKey='education' title='Education'>
-                    <h3 className='small'>Degree</h3>
+                    <span className='mt-3'><strong><u>Degree</u></strong></span>
                     <p className='my-0'><strong>PhD Political Economy.</strong> 2020, King's College London (KCL)</p>
                     <p className='my-0'><em> – with </em> <strong>Associateship of King’s College (AKC) (Ethics, Religion, Philosophy).</strong> 2021.</p>
                     <p className='my-0'><strong>MA Environment Politics & Globalisation.</strong> 2012, KCL.</p>
                     <p><strong>BA International Relations.</strong> 2010, Taltech.</p>
-                    <h3 className='small'>Selected specialisations</h3>
+                    <span className='mt-3'><strong><u>Selected specialisations</u></strong></span>
                     <p className='my-0'><strong>Data Warehousing.</strong> Univ. of Colorado, Coursera. 2022.</p>
                     <p className='my-0'><strong>AI Product Management.</strong> Duke, Coursera. 2022.</p>
                     <p className='my-0'><strong>Data Analytics.</strong> Google, Coursera. 2022.</p>
@@ -60,14 +60,12 @@ const AboutPage = () => {
               <Container>
                 <Row className='text-start'>
                   <Row className='linky py-lg-5' data-sal='slide-up' data-sal-delay='400' data-sal-easing='ease'>
-                    <h3 className='my-md-auto pzntrk'>Polyzentrik's story</h3>
-                    <p>Hi! I am J (Dr José A Bolanos). I founded and run Polyzentrik. The little one there with me is my son Ando. He helps me proofread.</p>
-                    <p>I was an academic for a bit, focused on sustainability, private governance, and policy. I am now amongst probably-few political economists who can talk shop with data and AI engineers.</p>
-                    <p>The transition was somewhat of an accident.</p>
-                    <p>I took time after my last position to learn to code a little. Soon after, my father passed just months before Ando was born. It was not easy. I took refuge in spending time with Ando and continued coding. And I learned, and kept learning, and then learned more.</p>
-                    <p>The experience changed me.</p>
+                    <h3 className='mb-3 pzntrk'>Polyzentrik's story</h3>
+                    <p>Hi! I am Dr J (José A Bolanos). I run Polyzentrik. The little one in the picture is my son. He helps me code every now and then.</p>
+                    <p>I was an academic for a bit. Sustainability, private governance, and policy. I am now amongst probably-few political economists who can talk shop with data and AI engineers.</p>
+                    <p>The transition was something of an accident. I took some time after my last position to learn to code a little. Soon after, my father passed just months before my son was born. Coding helped me deal with the deluge of mixed feelings. And I learned, and kept learning, and then learned more.</p>
                     <p>I remain interested in intellectual debates, but I am now also a more practical person who believes that while digital technologies have risks that need to be managed, they can do much good.</p>
-                    <p>I therefore want to help produce better and more sustainable digital technologies.</p>
+                    <p>Therefore, I am now focusing my time on coding and digital technologies.</p>
                   </Row>
                   <Row className='linky d-flex'>
                     <span className='my-3' data-sal='slide-up' data-sal-delay='400' data-sal-easing='ease'>

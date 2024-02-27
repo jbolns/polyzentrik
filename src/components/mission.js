@@ -15,11 +15,11 @@ const MissionComponent = () => {
           <p><strong>To help build better and more sustainable digital technologies</strong>.</p>
           <p className='reply'>How?</p>
           <p>... We don't know the full answer to this question. No one does!</p>
-          <p>That said, our long-term strategy is to make many small good things that add up to a toolkit for building digital technologies more ethically and sustainably.</p>
+          <p>That said, the long-term strategy is to make 'many small good things' that give people better and more sustainable digital choices.</p>
         </Col>
         <Col className='col-10 offset-1 col-lg-5 offset-lg-0'>
           <p className='reply'>And short-term, how can you help already today?</p>
-          <p><strong>Check our resources.</strong> We are producing resources addressing specific but very important challenges – these might already help you approach digital technologies better and more sustainably.</p>
+          <p><strong>Check our products and resources.</strong> They address specific but very important challenges and might already help you approach digital technologies better and more sustainably.</p>
           <p><strong>Ask about bespoke services.</strong> We code (and can help you code) in a way that considers resource-utilisation across the entire chain (server energy, CO2, data requirements, etc.). This helps build solutions that perform, are cost-efficient, and keep society and the environment in mind.</p>
           <p><a href='mailto: hello@polyzentrik.com?SUBJECT=Hi!' target='_blank' rel='noreferrer' aria-label='Link to send email'><strong>Get in touch</strong></a> for more details.</p>
         </Col>

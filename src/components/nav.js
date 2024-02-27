@@ -22,6 +22,11 @@ const NavComponent = () => {
               </Nav.Link>
             </Nav.Item>
             <Nav.Item >
+              <Nav.Link href='/products/'>
+                Products
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item >
               <Nav.Link href='/resources/'>
                 Resources
               </Nav.Link>
@@ -38,11 +43,6 @@ const NavComponent = () => {
             </Nav.Item>
           </Nav>
           <Nav className='linky'>
-            <Nav.Item className='support bg-white'>
-              <Nav.Link href='/help-us-help/'>
-                <span>Help us Help</span>
-              </Nav.Link>
-            </Nav.Item>
             <Nav.Item>
               <Nav.Link href='https://www.linkedin.com/company/polyzentrik/' target='_blank' rel='noopener noreferrer'>
                 <BsLinkedin title='LinkedIn' />

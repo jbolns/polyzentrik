@@ -27,8 +27,8 @@ const HelpUsHelpComponent = () => {
                 <Row className='linky d-flex'>
                   <span className='my-3' data-sal='slide-up' data-sal-delay='400' data-sal-easing='ease'>
                     <h4>Help us help</h4>
-                    <p>Help us spend more time in open-source/access resources by making a voluntary payment for usage of WEIRD or any other of our open-source resources.<sup>1</sup> Payments are handled via Stripe.<sup>2</sup></p>
-                    <p>If you add the necessary information in the payment form, we will, provided we deem the information valid and apropriate, add you to the list of supporters of the resource your payment relates to.</p>
+                    <p>Help us spend more time in open resources by making a voluntary payment for usage of our open resources.<sup>1</sup> Payments are handled via Stripe.<sup>2</sup></p>
+                    <p>The amount is completely up to you. Open-source and open-access projects require thousands of $/£/€ in human hours.<sup>3</sup></p>
                     <div className='my-2 text-end'>
                       <a href='https://buy.stripe.com/28o16Fci381F7LOeUX' target='_blank' rel='noreferrer noopener'>
                         <Button className='more border-secondary shadow w-75'>
@@ -37,8 +37,6 @@ const HelpUsHelpComponent = () => {
                       </a>
                       <p className='small'><Link to='/terms-conditions'>Terms & Conditions</Link></p>
                     </div>
-                    <br />
-                    <p>The amount is completely up to you. Our open-source/access projects take thousands of $/£/€ in human hours.<sup>3</sup></p>
                   </span>
                   <span className='mb-3' data-sal='slide-up' data-sal-delay='400' data-sal-easing='ease'>
                     <h5>Notes</h5>

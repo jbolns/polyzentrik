@@ -7,13 +7,13 @@ import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import StatusTip from './statustip'
 
-const ResourcesComponent = () => {
+const ProductsComponent = () => {
   const data = useStaticQuery(graphql
     `query {
       allMdx(
         sort: {frontmatter: {date: DESC}}
-        filter: {frontmatter: {type: {eq: "resources"}}}
-        limit: 4) 
+        filter: {frontmatter: {type: {eq: "products"}}}
+        limit: 3) 
         {
           nodes {
             id
@@ -22,7 +22,7 @@ const ResourcesComponent = () => {
               slug
               intro
               categories
-              status
+              license
             }
           }
         }
@@ -38,10 +38,10 @@ const ResourcesComponent = () => {
           <Container className='d-xl-flex'>
             <Col className='mb-5 col-12 col-xl-4'>
               <Container data-sal='slide-up' data-sal-delay='200' data-sal-easing='ease'>
-                <h3 className='pzntrk'>Open-source resources</h3>
-                <p>We produce open-source resources that can help others build better and more sustainable digital technologies.</p>
-                <Link to={`/resources/`}>
-                  <Button className='less float-end'>See all resources</Button>
+                <h3 className='pzntrk'>Products</h3>
+                <p>Digital tools that keep society and the environment in mind.</p>
+                <Link to={`/products/`}>
+                  <Button className='less float-end'>See all products</Button>
                 </Link>
                 <span className='clearer'></span>
               </Container>
@@ -50,33 +50,32 @@ const ResourcesComponent = () => {
               <Container className='d-md-flex flex-wrap'>
                 {
                   posts.map(node => (
-                    <Col key={node.id} className='col-12 col-lg-6 offset-md-0' data-sal='slide-up' data-sal-delay='400' data-sal-easing='ease'>
+                    <Col key={node.id} className='col-12 offset-md-1' data-sal='slide-up' data-sal-delay='400' data-sal-easing='ease'>
                       <Card variant='top' className='h-100'>
                         <Card.Body>
                           <Card.Title data-sal='zoom-out' data-sal-delay='400' data-sal-easing='ease'>
                             <h4>
-                              <Link to={`/resources/${node.frontmatter.slug}`}>
+                              <Link to={`/products/${node.frontmatter.slug}`}>
                                 {node.frontmatter.title}
                               </Link></h4>
                           </Card.Title>
                           <Card.Text>
-                            <Link to={`/resources/${node.frontmatter.categories}`}>
+                            <Link to={`/products/${node.frontmatter.categories}`}>
                               <span className='cats highlight'>
                                 {node.frontmatter.categories.replace('-', ' ')}
                               </span>
                             </Link>
                             <span className='clearer excerpt'>{node.frontmatter.intro}</span>
                             <span className='additional'>
-                              <span className='status'>Status:&nbsp;</span>
-                              <span className={node.frontmatter.status}>
-                                {node.frontmatter.status}
+                              <span className='status'>License:&nbsp;</span>
+                              <span className={node.frontmatter.license}>
+                                {node.frontmatter.license}
                               </span>.
-                              <StatusTip />
                             </span>
                             <span className='clearer'></span>
-                            <Link to={`/resources/${node.frontmatter.slug}`}>
+                            <Link to={`/products/${node.frontmatter.slug}`}>
                               <Button className='more float-end'>
-                                Check resource
+                                Check product
                               </Button>
                             </Link>
                           </Card.Text>
@@ -96,4 +95,4 @@ const ResourcesComponent = () => {
 }
 
 
-export default ResourcesComponent
+export default ProductsComponent

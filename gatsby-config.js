@@ -68,6 +68,10 @@ module.exports = {
       options: { name: `resources`, path: `${__dirname}/resources`, }
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: { name: `products`, path: `${__dirname}/products`, }
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -82,21 +86,6 @@ module.exports = {
       options: {
         lang: 'en-GB'
       }
-    },
-    {
-      resolve: `gatsby-plugin-webfonts`,
-      options: {
-        fonts: {
-          google: [
-            {
-              family: "Unbounded",
-              variants: ["900"],
-              strategy: 'selfHosted',
-            },
-          ],
-        },
-        formats: ['woff2'],
-      },
     },
     {
       resolve: `gatsby-plugin-scroll-reveal-with-new-react`,
