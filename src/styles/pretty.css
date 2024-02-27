@@ -15,6 +15,14 @@ html,
 }
 
 /**************************************/
+/************* FONT SHENANIGANS ****************/
+/************************************/
+@font-face {
+    font-family: 'unbounded';
+    src: url('../../static/unbounded-variable.ttf') format('truetype');
+}
+
+/**************************************/
 /******* KEY HTML ELEMENTS **********/
 /************************************/
 body {
@@ -32,12 +40,14 @@ footer {
 }
 
 h1,
-h2,
-h3,
-h4,
-h5 {
+h2 {
     font-family: unbounded, tahoma;
 }
+
+h3, h4, h5 {
+    font-family: monospace;
+    font-weight: 600;
+}   
 
 main {
     min-height: 70vh;
@@ -183,7 +193,6 @@ header .navbar-collapse {
 }
 
 .collapsing {
-
     animation-name: collapse-in-style;
     animation-duration: 1.5s;
     animation-timing-function: linear;
@@ -216,6 +225,7 @@ header .navbar-collapse.collapse.show {
 header #responsive-navbar-nav.show .nav-item {
     margin: 7px auto;
     border: none;
+    font-variant: small-caps;
 }
 
 header #responsive-navbar-nav.show .linky {
@@ -330,18 +340,9 @@ header #responsive-navbar-nav.show .linky .nav-item {
 main .gatsby-image-wrapper,
 main .gatsby-image-wrapper-constrained {
     background: white;
-    width: 70% !important;
     margin: 0;
     border: 3px solid black;
-    border-radius: 0 50px 0 5px;
     border-bottom: 1px solid black;
-    transition: 0.7s;
-}
-
-main .gatsby-image-wrapper img,
-main .gatsby-image-wrapper-constrained img {
-    width: 102%;
-    height: 102%;
 }
 
 .card-title {
@@ -472,11 +473,6 @@ main .gatsby-image-wrapper-constrained img {
     font-size: smaller;
     font-style: italic;
     font-weight: 600;
-}
-
-.shop .gatsby-image-wrapper {
-    width: 45% !important;
-    margin: auto;
 }
 
 .blog details {
@@ -837,41 +833,12 @@ main,
         padding-right: 14%;
     }
 
-    main .gatsby-image-wrapper,
-    main .gatsby-image-wrapper-constrained {
-        width: 90% !important;
-    }
-
-    main .gatsby-image-wrapper:hover,
-    main .gatsby-image-wrapper-constrained:hover {
-        border-top-left-radius: 30px;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 5px;
-        margin-left: 10%;
-    }
-
-    main .article-title .gatsby-image-wrapper,
-    main .article-title .gatsby-image-wrapper-constrained {
-        max-width: 600px;
-        border: 1px solid;
-        border-radius: 0;
-    }
-
-    main .article-title .gatsby-image-wrapper:hover,
-    main .article-title .gatsby-image-wrapper-constrained:hover {
-        margin: 0;
-    }
-
     .hidey {
         display: block;
     }
 
     .content h2 {
         margin-top: 0;
-    }
-
-    .blog .gatsby-resp-image-wrapper {
-        max-width: 60% !important;
     }
 
     .lower-footer ul li {
@@ -882,14 +849,14 @@ main,
     .additional span.status {
         display: block;
     }
-    
+
 }
 
 @media screen and (min-width: 992px) {
     .reverse {
         flex-direction: row-reverse;
     }
-    
+
     header .dropdown-menu {
         text-align: left;
     }
@@ -920,16 +887,6 @@ main,
         text-align: right;
     }
 
-    .card-title h3 {
-        font-size: large;
-    }
-
-    .blog h3,
-    .services h3,
-    .resources h3 {
-        font-size: large;
-    }
-
     .blog h4,
     .services h4,
     .resources h4 {
@@ -940,6 +897,31 @@ main,
     .services h5,
     .resources h5 {
         font-size: small;
+    }
+
+    main .gatsby-image-wrapper,
+    main .gatsby-image-wrapper-constrained {
+        width: 90% !important;
+    }
+
+    main .gatsby-image-wrapper:hover,
+    main .gatsby-image-wrapper-constrained:hover {
+        border-top-left-radius: 30px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 5px;
+        margin-left: 10%;
+    }
+
+    main .article-title .gatsby-image-wrapper,
+    main .article-title .gatsby-image-wrapper-constrained {
+        max-width: 600px;
+        border: 1px solid;
+        border-radius: 0;
+    }
+
+    main .article-title .gatsby-image-wrapper:hover,
+    main .article-title .gatsby-image-wrapper-constrained:hover {
+        margin: 0;
     }
 
     .blog .gatsby-resp-image-wrapper {

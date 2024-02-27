@@ -56,6 +56,11 @@ const ContentPage = ({ location, data }) => {
     <Row className='col-8 offset-2'>
       <p>These are our ongoing open-source or open-access projects in the {path[2].replace('-', ' ')} space. Each has or will produce resources for others to use.</p>
     </Row>
+  
+  const productsWelcome = () =>
+  <Row className='col-8 offset-2'>
+    <p>These are our products.</p>
+  </Row>
 
   const blogWelcome = () =>
     <Row className='col-8 offset-2'>
@@ -69,6 +74,7 @@ const ContentPage = ({ location, data }) => {
         {path[1] === 'services' && servicesWelcome()}
         {path[1] === 'resources' && resourcesWelcome()}
         {path[1] === 'blog' && blogWelcome()}
+        {path[1] === 'products' && productsWelcome()}
         <Row className='horizontal-section shadow'>
           <Container className='col-10 mb-3 categorical'>
             <CategoriesComponent />

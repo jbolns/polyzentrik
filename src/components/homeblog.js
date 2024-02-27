@@ -64,7 +64,7 @@ const HomeBlog = () => {
                       </Link>
                       <Card.Body data-sal='zoom-out' data-sal-delay='200' data-sal-easing='ease'>
                         <Card.Title data-sal='zoom-out' data-sal-delay='200' data-sal-easing='ease'>
-                          <h4 className='small'><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h4>
+                          <h4><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h4>
                         </Card.Title>
                         <Card.Text data-sal='zoom-out' data-sal-delay='200' data-sal-easing='ease'>
                           <Link to={`/blog/${node.frontmatter.categories}`}>

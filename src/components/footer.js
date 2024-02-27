@@ -36,10 +36,10 @@ const FooterComponent = () => {
           <Col md={6} className='wordcloud mt-5 mt-md-0 text-end'>
             <ul>
               <li className='s2'><Link to='/'>Home</Link></li>
+              <li className='s1'><Link to='/products/'>Products</Link></li>
               <li className='s1'><Link to='/resources/'>Resources</Link></li>
               <li className='s3'><Link to='/services/'>Services</Link></li>
               <li className='s4'><Link to='/blog/'>Blog</Link></li>
-              <li className='s5'><Link to='/roadmap/'>Roadmap</Link></li>
               <li className='s6'><Link to='/about/'>About&Contact</Link></li>
               <li className='s2'><Link to='/help-us-help/' className='text-decoration-underline'>Help us help</Link></li>
               <li className='s7'><Link to='/gateway/'>Payments gateway</Link></li>
