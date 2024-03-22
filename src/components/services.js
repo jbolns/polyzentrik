@@ -1,5 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Container from 'react-bootstrap/esm/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -12,7 +13,7 @@ const ServicesComponent = () => {
       allMdx(
         sort: {frontmatter: {rank: ASC}}
         filter: {frontmatter: {type: {eq: "services"}}}
-        limit: 4) 
+        limit: 3) 
         {
           nodes {
             id
@@ -37,58 +38,52 @@ const ServicesComponent = () => {
   const posts = data.allMdx.nodes
 
   return (
-    <Container fluid className='horizontal-section shadow'>
-      <Row>
-        <Col className='col-lg-8 offset-lg-2'>
-          <Container className='d-md-flex'>
-            <Col className='col-12 col-md-4'>
-              <Container data-sal='slide-up' data-sal-delay='200' data-sal-easing='ease'>
-                <h3 className='pzntrk'>Services</h3>
-                <p>And while we cannot do everything at once, we can help you with pretty much anything digital.</p>
-                <p>We consider resource-utilisation across the entire chain, which helps build solutions that are cost-efficient and keep society and the environment in mind.</p>
-                <p>No need to take our word for it. Check our site's performance and sustainability scores. Do the same for competitors.</p>
-                <p></p>
-              </Container>
-            </Col>
-            <Col className='col-12 col-md-8'>
-              <Container className='d-md-flex flex-wrap'>
-                {
-                  posts.map(node => (
-                    <Col key={node.id} className='col-12 col-md-6 offset-md-0' data-sal='slide-up' data-sal-delay='400' data-sal-easing='ease'>
-                      <Card variant='top' className='h-100'>
-                        <Card.Body>
-                          <Card.Title data-sal='zoom-out' data-sal-delay='400' data-sal-easing='ease'>
-                            <h4 className='small'>
-                              <Link to={`/services/${node.frontmatter.slug}`}>
-                                {node.frontmatter.title}
-                              </Link></h4>
-                          </Card.Title>
-                          <Card.Text>
-                            <Link to={`/services/${node.frontmatter.categories}`}>
-                              <span className='cats highlight'>
-                                {node.frontmatter.categories.replace('-', ' ')}
-                              </span>
-                            </Link>
-                            <span className='clearer excerpt'>{node.frontmatter.intro}</span>
-                            <span className='clearer'></span>
-                            <Link to={`/services/${node.frontmatter.slug}`}>
-                              <Button className='more float-end'>
-                                Check service
-                              </Button>
-                            </Link>
-                          </Card.Text>
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                  ))
-                }
-              </Container>
-              <Link to={`/services/`}>
-                <Button className='mt-5 less float-end'>See all services</Button>
-              </Link>
-            </Col>
-
-
+    <Container fluid className='horizontal-section shadow bg-highlight'>
+      <Row className='col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 d-xl-flex'>
+        <Col lg={3}>
+          <Container>
+            <h3 className='pzntrk'>Top services</h3>
+            <p>We cannot do everything at once, but we can help you with pretty much anything digital.</p>
+            <p>We consider resource-utilisation across the entire chain, which helps build solutions that are cost-efficient and keep society and the environment in mind.</p>
+            <Link to={`/services/`}>
+              <Button className='less float-end'>See all services</Button>
+            </Link>
+            </Container>
+        </Col>
+        <Col lg={9}>
+          <Container>
+            <Row>
+            {
+              posts.map(node => (
+                <Col key={node.id} md={4} className='px-0 my-md-auto'>
+                  <Card data-sal='slide-up' data-sal-delay='300' data-sal-easing='ease'>
+                  <Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}>
+                        <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt='Placeholder image' data-sal='zoom-out' data-sal-delay='200' data-sal-easing='ease' />
+                      </Link>
+                      <Card.Body data-sal='zoom-out' data-sal-delay='200' data-sal-easing='ease'>
+                        <Card.Title data-sal='zoom-out' data-sal-delay='200' data-sal-easing='ease'>
+                        <h4><Link to={`/${node.frontmatter.type}/${node.frontmatter.slug}`}> {node.frontmatter.title}</Link></h4>
+                      </Card.Title>
+                      <Card.Text>
+                        <Link to={`/services/${node.frontmatter.categories}`}>
+                          <span className='cats highlight'>
+                            {node.frontmatter.categories.replace('-', ' ')}
+                          </span>
+                        </Link>
+                        <span className='clearer excerpt'>{node.frontmatter.intro}</span>
+                        <span className='clearer'></span>
+                        <Link to={`/services/${node.frontmatter.slug}`}>
+                          <Button className='more float-end' data-sal='zoom-out' data-sal-delay='200' data-sal-easing='ease'>
+                            Check service
+                          </Button>
+                        </Link>
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              ))
+            }
+          </Row>
           </Container>
         </Col>
       </Row>

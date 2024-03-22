@@ -27,13 +27,13 @@ const NavComponent = () => {
               </Nav.Link>
             </Nav.Item>
             <Nav.Item >
-              <Nav.Link href='/resources/'>
-                Resources
+              <Nav.Link href='/services/'>
+                Services
               </Nav.Link>
             </Nav.Item>
             <Nav.Item >
-              <Nav.Link href='/blog/'>
-                Blog
+              <Nav.Link href='/resources/'>
+                Resources
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>

@@ -55,10 +55,10 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: { "name": "pages", "path": "./src/pages/" }, __key: "pages"
     },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: { name: `blog`, path: `${__dirname}/blog`, }
-    },
+    //{
+    //  resolve: "gatsby-source-filesystem",
+    //  options: { name: `blog`, path: `${__dirname}/blog`, }
+    //},
     {
       resolve: "gatsby-source-filesystem",
       options: { name: `services`, path: `${__dirname}/services`, }
