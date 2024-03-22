@@ -1,32 +1,40 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
-import StatusTip from './statustip'
 
 const ProductsComponent = () => {
-  const data = useStaticQuery(graphql
-    `query {
+  const data = useStaticQuery(graphql`
+    query {
       allMdx(
         sort: {frontmatter: {date: DESC}}
         filter: {frontmatter: {type: {eq: "products"}}}
         limit: 3) 
         {
-          nodes {
-            id
-            frontmatter {
-              title
-              slug
-              intro
-              categories
-              license
+        nodes {
+          frontmatter {
+            title
+            slug
+            intro
+            categories
+            license
+            hero_image {
+              childImageSharp {
+                gatsbyImageData  (
+                  layout: FULL_WIDTH
+                  )
+              }
             }
           }
+          id
+          excerpt
         }
       }
+    }
     `)
 
   const posts = data.allMdx.nodes
@@ -34,24 +42,12 @@ const ProductsComponent = () => {
   return (
     <Container fluid className='horizontal-section shadow bg-highlight'>
       <Row>
-        <Col className='col-lg-8 offset-lg-2'>
-          <Container className='d-xl-flex'>
-            <Col className='mb-5 col-12 col-xl-4'>
-              <Container data-sal='slide-up' data-sal-delay='200' data-sal-easing='ease'>
-                <h3 className='pzntrk'>Products</h3>
-                <p>Digital tools that keep society and the environment in mind.</p>
-                <Link to={`/products/`}>
-                  <Button className='less float-end'>See all products</Button>
-                </Link>
-                <span className='clearer'></span>
-              </Container>
-            </Col>
-            <Col className='col-12 col-xl-8'>
-              <Container className='d-md-flex flex-wrap'>
-                {
-                  posts.map(node => (
-                    <Col key={node.id} className='col-12 offset-md-1' data-sal='slide-up' data-sal-delay='400' data-sal-easing='ease'>
-                      <Card variant='top' className='h-100'>
+        <Col className='col-lg-6 offset-lg-3 lokal'>
+          <Container className='d-md-flex flex-wrap'>
+                <StaticImage src='..\images\graphics\LOKAL-banner.webp' alt='A banner logo of LOKAL' className='no-effect' />
+                  {
+                    posts.map(node => (
+                      <Card key={node.id} variant='top' className='h-100 mt-1' data-sal='slide-up' data-sal-delay='400' data-sal-easing='ease'>
                         <Card.Body>
                           <Card.Title data-sal='zoom-out' data-sal-delay='400' data-sal-easing='ease'>
                             <h4>
@@ -81,18 +77,13 @@ const ProductsComponent = () => {
                           </Card.Text>
                         </Card.Body>
                       </Card>
-                    </Col>
-                  ))
-                }
-
-              </Container>
-            </Col>
+                    ))
+                  }
           </Container>
         </Col>
       </Row>
     </Container>
   )
 }
-
 
 export default ProductsComponent

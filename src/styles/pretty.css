@@ -44,10 +44,12 @@ h2 {
     font-family: unbounded, tahoma;
 }
 
-h3, h4, h5 {
+h3,
+h4,
+h5 {
     font-family: monospace;
     font-weight: 600;
-}   
+}
 
 main {
     min-height: 70vh;
@@ -904,12 +906,26 @@ main,
         width: 90% !important;
     }
 
+    .lokal .gatsby-image-wrapper,
+    .lokal .gatsby-image-wrapper-constrained {
+        width: 100% !important;
+    }
+
     main .gatsby-image-wrapper:hover,
     main .gatsby-image-wrapper-constrained:hover {
         border-top-left-radius: 30px;
         border-top-right-radius: 0;
         border-bottom-right-radius: 5px;
         margin-left: 10%;
+    }
+
+    .lokal .gatsby-image-wrapper:hover,
+    .lokal .gatsby-image-wrapper-constrained:hover {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 25px;
+        margin-left: 0;
+        background: #d7fff3;
     }
 
     main .article-title .gatsby-image-wrapper,

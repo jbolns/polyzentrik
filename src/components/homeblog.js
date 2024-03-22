@@ -12,7 +12,7 @@ const HomeBlog = () => {
     query {
       allMdx(
         sort: {frontmatter: {date: DESC}}
-        filter: {frontmatter: {type: {eq: "blog"}}}
+        filter: {frontmatter: {type: {eq: "products"}}}
         limit: 3) 
         {
         nodes {
