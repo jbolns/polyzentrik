@@ -44,7 +44,7 @@ const ProductsComponent = () => {
       <Row>
         <Col className='col-lg-6 offset-lg-3 lokal'>
           <Container className='d-md-flex flex-wrap'>
-                <StaticImage src='..\images\graphics\LOKAL-banner.webp' alt='A banner logo of LOKAL' className='no-effect' />
+                <StaticImage src='..\images\graphics\LOKAL-banner.jpg' alt='A banner logo of LOKAL' className='no-effect' />
                   {
                     posts.map(node => (
                       <Card key={node.id} variant='top' className='h-100 mt-1' data-sal='slide-up' data-sal-delay='400' data-sal-easing='ease'>
