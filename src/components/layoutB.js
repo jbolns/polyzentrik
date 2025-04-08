@@ -4,21 +4,26 @@ import NavComponent from './nav'
 import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container'
 
-const Layout = ({ pageTitle, children }) => {
+const LayoutB = ({ pageTitle, children }) => {
 
   if (typeof window === 'undefined') {
     return <></>;
   } else {
     return (
-      <Container fluid className='h-100'>
+      <Container fluid>
         <header>
           <NavComponent />
         </header>
         <main>
-          <section>
+          <section className='non-branding-section'>
+            <Container fluid className='mt-5'>
+              <Row className='col-8 offset-2 titulazo'>
+                <h2 className='pzntrk'>{pageTitle}</h2>
+              </Row>
               <Row>
                 <div>{children}</div>
               </Row>
+            </Container>
           </section>
         </main>
         <footer>
@@ -29,5 +34,4 @@ const Layout = ({ pageTitle, children }) => {
     )
   }
 }
-
-export default Layout
+export default LayoutB

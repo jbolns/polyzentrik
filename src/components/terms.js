@@ -12,7 +12,7 @@ const TermsComponent = () => {
             <p><strong>Definitions</strong></p>
             <p>For the purposes of these Terms and Conditions:</p>
             <ul>
-                <li>“Company” (referred to as either “the Company”, “We”, “Us”, or “Our” in this Agreement) refers to Polyzentrik Tmi.</li>
+                <li>“Company” (referred to as either “the Company”, “I”, “We”, “Us”, or “Our” in this Agreement) refers to Polyzentrik Tmi.</li>
                 <li>“Country” refers to Finland.</li>
                 <li>“Content” refers to Content such as text, images, or other information that can be posted, uploaded, linked to or otherwise made available to or by You, regardless of the form of that Content.</li>
                 <li>“Device” means any device that can access the Service such as a computer, a cellphone or a digital tablet.</li>

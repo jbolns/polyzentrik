@@ -52,8 +52,9 @@ h5 {
 }
 
 main {
-    min-height: 70vh;
+    min-height: 80vh;
     padding-bottom: 3rem;
+    
 }
 
 a {
@@ -110,11 +111,10 @@ blockquote {
 }
 
 .trigger .highlight {
-    padding: 0 1px;
-    background: none;
-    border: 0;
-    text-decoration: underline;
-    font-weight: 600;
+    padding: 0;
+    background: white;
+    font-weight: 900;
+    border: 1px dotted white;
 }
 
 /**************************************/
@@ -122,13 +122,14 @@ blockquote {
 /************************************/
 header .main-nav {
     background: white;
-    border-bottom: 3px solid black;
-    height: 3rem;
+    border-bottom: 3px solid white;
+    height: 10vh;
+    color: black;
 }
 
 header .navbar-nav,
 .logo h1 {
-    background: black;
+    
     animation-name: fade-in;
     animation-duration: 1.7s;
     animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -144,7 +145,7 @@ header .nav-item {
 }
 
 header .nav-item a {
-    color: white;
+    color: black;
 }
 
 header *:focus,
@@ -242,11 +243,10 @@ header #responsive-navbar-nav.show .linky .nav-item {
 
 .scene,
 .logo {
-    min-height: 60vh;
-    background: black;
+    min-height: 80vh;
     background: linear-gradient(-45deg, #e73c7e, #8a6ae1, #8a6ae1, #23d5ab);
     background-size: 300% 300%;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid white;
     margin-bottom: 0;
     animation: gradient 20s ease-in-out infinite;
 }
@@ -304,13 +304,23 @@ header #responsive-navbar-nav.show .linky .nav-item {
 }
 
 .trigger {
+    float: right;  
     font-size: small;
-    margin: 0 10% 0 0;
+    background: white;
+    margin: 0;
+    padding: 5px;
+    border: 1px dotted black;
+    border-bottom: 0;
 }
 
 /**************************************/
 /******** MAIN CONTENT AREA **********/
 /************************************/
+
+.non-branding-section {
+    margin-top: 7vh;
+}
+
 .titulazo {
     margin-top: 5em;
 }
@@ -514,17 +524,6 @@ main .gatsby-image-wrapper-constrained {
 /*********** FOOTER SECTION **********/
 /************************************/
 
-footer {
-    margin-top: 5em;
-    padding-top: 0.4em;
-    border-top: 1px dotted #fff;
-    background: black;
-    color: #ddd;
-}
-
-footer a {
-    color: white;
-}
 
 footer ul {
     padding-left: 0

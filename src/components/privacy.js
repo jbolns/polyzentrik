@@ -15,7 +15,7 @@ const PrivacyComponent = () => {
             <p>For the purposes of this Privacy Policy:</p>
             <ul>
                 <li>“Account” means a unique account created for You to access our Service or parts of our Service.</li>
-                <li>“Company” (referred to as either “the Company”, “We”, “Us”, or “Our” in this Agreement) refers to Polyzentrik Tmi.</li>
+                <li>“Company” (referred to as either “the Company”, “I”, “We”, “Us”, or “Our” in this Agreement) refers to Polyzentrik Tmi.</li>
             </ul>
             <p>For the purpose of the GDPR, the Company is the Data Controller.</p>
             <ul>

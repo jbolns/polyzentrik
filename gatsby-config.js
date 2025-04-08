@@ -55,21 +55,9 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: { "name": "pages", "path": "./src/pages/" }, __key: "pages"
     },
-    //{
-    //  resolve: "gatsby-source-filesystem",
-    //  options: { name: `blog`, path: `${__dirname}/blog`, }
-    //},
     {
       resolve: "gatsby-source-filesystem",
-      options: { name: `services`, path: `${__dirname}/services`, }
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: { name: `resources`, path: `${__dirname}/resources`, }
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: { name: `products`, path: `${__dirname}/products`, }
+      options: { name: `blog`, path: `${__dirname}/blog`, }
     },
     {
       resolve: `gatsby-transformer-remark`,

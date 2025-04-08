@@ -266,7 +266,7 @@ class Animation extends React.Component {
         return (
             <div
                 ref={ref => (this.mount = ref)}
-                style={{ width: "100%", height: "60vh", margin: "auto"}}>
+                style={{ width: "100%", height: "80vh", margin: "auto"}}>
             </div>
             
         )

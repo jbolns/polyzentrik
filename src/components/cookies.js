@@ -15,7 +15,7 @@ const CookiesComponent = () => {
             <p><strong> Definitions </strong></p>
             <p>For the purposes of this Cookies Policy:</p>
             <ul>
-                <li>“Company” (referred to as either “the Company”, “We”, “Us”, or “Our” in this Cookies Policy) refers to Polyzentrik Tmi.</li>
+                <li>“Company” (referred to as either “the Company”, “I”, “We”, “Us”, or “Our” in this Cookies Policy) refers to Polyzentrik Tmi.</li>
                 <li>“Cookies” means small files that are placed on Your computer, mobile device or any other device by a website, containing details of your browsing history on that website among its many uses.</li>
                 <li>“Website” refers to Polyzentrik’s website, i.e., this website, accessible from http://www.polyzentrik.com and alternative domain forms (including but not limited to https://www.polyzentrik.com, http://polyzentrik.com, and https://polyzentrik.com).</li>
                 <li>“You” means the individual accessing or using the Website, or a company, or any legal entity on behalf of which such individual is accessing or using the Website, as applicable.</li>
