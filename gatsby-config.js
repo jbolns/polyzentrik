@@ -9,7 +9,7 @@ module.exports = {
   siteMetadata: {
     title: "Polyzentrik",
     description: "Better and more sustainable digital technologies",
-    siteUrl: "https://www.polyzentrik.com",
+    siteUrl: "https://polyzentrik.josebolanos.xyz/",
     image: "/logo-banner.png"
   },
   plugins: [
@@ -93,8 +93,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://www.polyzentrik.com',
-        sitemap: 'https://www.polyzentrik.com/sitemap-index.xml',
+        host: 'https://polyzentrik.josebolanos.xyz/',
+        sitemap: 'https://polyzentrik.josebolanos.xyz/sitemap-index.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
     }
