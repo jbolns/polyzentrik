@@ -9,8 +9,8 @@ module.exports = {
   siteMetadata: {
     title: "Polyzentrik",
     description: "Better and more sustainable digital technologies",
-    siteUrl: "https://polyzentrik.josebolanos.xyz/",
-    image: "/logo-banner.png"
+    siteUrl: "https://polyzentrik.josebolanos.xyz",
+    image: "https://polyzentrik.josebolanos.xyz/logo-banner.png"
   },
   plugins: [
     `gatsby-plugin-image`,
